@@ -1,28 +1,44 @@
+import { useState } from 'react'
 import {MdEmail} from 'react-icons/md'
 import { Account, ID  } from 'appwrite'
 
 const EmailAuth = ({client, redirectURL}) => {
+  const [showPopup, setshowPopup] = useState(false)
   const account = new Account(client) 
   return (
     <button className="email-auth-btn"
     onClick={()=>{
-     const accountCreate = account.create(
-        ID.unique(),
-        'ucantseemej@gmail.com',
-        'Jhon8181#'
-      )
-      accountCreate.then((res)=>{
-        account.createEmailSession('ucantseemej@gmail.com', 'Jhon8181#')
-      .then(response => {
-        console.log(response)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-      })
+      setshowPopup(!showPopup)
     }}
-    ><MdEmail className='icon' /> &nbsp; Sign in with Email</button>
+    ><MdEmail className='icon' /> &nbsp; Sign in with Email
+    <EmailPromptPopup showPopup={showPopup} setshowPopup={setshowPopup} />
+    </button>
   )
 }
 
 export default EmailAuth
+
+
+const EmailPromptPopup = ({showPopup, setshowPopup}) =>{
+  return(
+    <>
+    <div className={showPopup ? 'popup' : 'popup-closed'}
+    onClick={()=>{
+      setshowPopup(false)
+    }}
+    >
+      <form className='form'
+      onClick={(e)=>{
+        e.stopPropagation()
+      }}
+      >
+        <label className='label'>Email</label>
+        <input className='email' type="email" placeholder="Email" />
+        <label className='label'>Password</label>
+        <input className='password' type="password" placeholder="Password" />
+        <button className='submit' type="submit">Sign in</button>
+        </form>
+     </div>
+    </>
+  )
+}

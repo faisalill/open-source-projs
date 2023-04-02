@@ -158,3 +158,65 @@ body{
     color: white;
   }
 }
+
+.popup{
+ position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border : 3px solid $email-auth-btn-bg;
+    .label{
+      font-size: 20px;
+      color: lighten($email-auth-btn-bg, 10%); 
+    }
+
+    .email{
+      padding: 10px;
+      border: 1px solid $email-auth-btn-bg;
+      border-radius: 5px;
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .password{
+      padding: 10px;
+      border: 1px solid $email-auth-btn-bg;
+      border-radius: 5px;
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .submit{
+      padding: 10px;
+      border: 1px solid $email-auth-btn-bg;
+      border-radius: 5px;
+      background-color: $email-auth-btn-bg;
+      color: white;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        cursor: pointer;
+        background-color: darken($email-auth-btn-bg, 15%);
+      }
+    }
+
+  }
+}
+.popup-closed{
+  display: none;
+}
