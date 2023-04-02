@@ -1,8 +1,14 @@
+import { Account } from 'appwrite'
 
 
-const MicrosoftAuth = () => {
+const MicrosoftAuth = ({client, redirectURL}) => {
+  const account = new Account(client)
   return (
-    <button className="microsoft-auth-btn"><MicrosoftSvg className='icon' /> &nbsp; Sign in with Microsoft</button>
+    <button className="microsoft-auth-btn"
+    onClick={()=>{
+     account.createOAuth2Session('microsoft', redirectURL)
+    }}
+    ><MicrosoftSvg className='icon' /> &nbsp; Sign in with Microsoft</button>
   )
 }
 
