@@ -10,6 +10,8 @@ import AmazonAuth from "./AmazonAuth";
 import AuthO from "./AuthO";
 import DiscordAuth from "./DiscordAuth";
 import SpotifyAuth from "./SpotifyAuth";
+import TwitchAuth from "./TwitchAuth";
+
 
 export {
   GoogleAuth,
@@ -24,4 +26,5 @@ export {
   AuthO,
   DiscordAuth,
   SpotifyAuth,
+  TwitchAuth,
 };

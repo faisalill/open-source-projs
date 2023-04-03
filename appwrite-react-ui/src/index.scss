@@ -22,6 +22,13 @@ $discord-auth-btn-bg: #5865F2;
 $discord-auth-btn-text-color: #fff;
 $spotify-auth-btn-bg: #1ED760;
 $spotify-auth-btn-text-color: #fff;
+$twitch-auth-btn-bg: #9146FF;
+$twitch-auth-btn-text-color: #fff;
+
+
+
+
+
 
 
 
@@ -265,7 +272,7 @@ body{
   background: $discord-auth-btn-bg;
   color: $discord-auth-btn-text-color;
   &:hover {
-    background: darken($discord-auth-btn-bg, 15%);
+    background: lighten($discord-auth-btn-bg, 5%);
   }
   .icon{
     color: white;
@@ -279,6 +286,19 @@ body{
   color: $spotify-auth-btn-text-color;
   &:hover {
     background: darken($spotify-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.twitch-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $twitch-auth-btn-bg;
+  color: $twitch-auth-btn-text-color;
+  &:hover {
+    background: lighten($twitch-auth-btn-bg, 5%);
   }
   .icon{
     color: white;
