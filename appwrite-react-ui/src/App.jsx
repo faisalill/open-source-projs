@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { Client, Account} from 'appwrite'
-import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth } from './OAuth Components'
+import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth } from './OAuth Components'
 const client = new Client()
 .setEndpoint('http://localhost:80/v1') // Your API Endpoint
 .setProject('642875d37aa84cef123e') // Your project ID
@@ -26,6 +26,7 @@ const App = () => {
     <AppleAuth client={client} redirectURL="http://localhost:5173" />
     <PhoneAuth client={client} redirectURL="http://localhost:5173" />
     <DiscordAuth client={client} redirectURL="http://localhost:5173" />
+    <SpotifyAuth client={client} redirectURL="http://localhost:5173"/>
     <button
     onClick={()=>{
       account.deleteSessions('current')

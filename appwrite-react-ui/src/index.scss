@@ -20,6 +20,10 @@ $auth0-auth-btn-bg: #EA5424;
 $auth0-auth-btn-text-color: #fff;
 $discord-auth-btn-bg: #5865F2;
 $discord-auth-btn-text-color: #fff;
+$spotify-auth-btn-bg: #1ED760;
+$spotify-auth-btn-text-color: #fff;
+
+
 
 *{
   margin: 0;
@@ -262,6 +266,19 @@ body{
   color: $discord-auth-btn-text-color;
   &:hover {
     background: darken($discord-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.spotify-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $spotify-auth-btn-bg;
+  color: $spotify-auth-btn-text-color;
+  &:hover {
+    background: darken($spotify-auth-btn-bg, 15%);
   }
   .icon{
     color: white;

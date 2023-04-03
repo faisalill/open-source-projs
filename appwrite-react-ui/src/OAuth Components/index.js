@@ -9,6 +9,7 @@ import PhoneAuth from "./PhoneAuth";
 import AmazonAuth from "./AmazonAuth";
 import AuthO from "./AuthO";
 import DiscordAuth from "./DiscordAuth";
+import SpotifyAuth from "./SpotifyAuth";
 
 export {
   GoogleAuth,
@@ -22,4 +23,5 @@ export {
   AmazonAuth,
   AuthO,
   DiscordAuth,
+  SpotifyAuth,
 };
