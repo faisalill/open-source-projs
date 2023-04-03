@@ -45,6 +45,7 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
       >
         <label className='label'>Email</label>
         <input className='email' type="email" placeholder="Email" 
+        value={email}
         onChange={(e)=>{
           setEmail(e.target.value)
         }
@@ -52,6 +53,7 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
         />
         <label className='label'>Password</label>
         <input className='password' type="password" placeholder="Password" 
+        value={password}
         onChange={(e)=>{
           setPassword(e.target.value)
         }
@@ -62,6 +64,8 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
           e.preventDefault()
           setshowPopup(false)
           setshowVerificationPopup(true)
+          setEmail('')
+          setPassword('')
           account.create(
             id,
             email, 
@@ -70,10 +74,10 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
             account.createEmailSession(email, password)
             .then((res)=>{
             account.createVerification(redirectURL)
-          })
+            })
           })
         }}
-        >Sign in</button>
+        >Get Verification Link</button>
         </form>
      </div>
      <VerificationPopup changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account} />
@@ -88,7 +92,7 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
     <>
     <div className={showVerificationPopup ? 'popup' : 'popup-closed'}
     onClick={()=>{
-      setshowVerificationPopup(false)
+      // setshowVerificationPopup(false)
     }}
     >
       <form className='form'
@@ -108,7 +112,8 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
         onClick={(e)=>{
           e.preventDefault()
           setshowVerificationPopup(false)
-          const promise = account.updateVerification(id, verificationCode.split('?')[1].split('&')[1].split('=')[1].toString())
+          // console.log(verificationCode.split('?')[1].split('&')[0].split('=')[1].toString(), verificationCode.split('?')[1].split('&')[1].split('=')[1].toString())
+          const promise = account.updateVerification(verificationCode.split('?')[1].split('&')[0].split('=')[1], verificationCode.split('?')[1].split('&')[1].split('=')[1].toString())
           promise.then((res)=>{
             setchangeId(!changeId)
             setverificationCode('')
