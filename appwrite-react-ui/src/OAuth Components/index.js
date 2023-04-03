@@ -8,7 +8,7 @@ import AppleAuth from "./AppleAuth";
 import PhoneAuth from "./PhoneAuth";
 import AmazonAuth from "./AmazonAuth";
 import AuthO from "./AuthO";
-
+import DiscordAuth from "./DiscordAuth";
 
 export {
   GoogleAuth,
@@ -21,4 +21,5 @@ export {
   PhoneAuth,
   AmazonAuth,
   AuthO,
+  DiscordAuth,
 };
