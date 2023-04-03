@@ -6,6 +6,7 @@ import GithubAuth from "./GithubAuth";
 import MicrosoftAuth from "./MicrosoftAuth";
 import AppleAuth from "./AppleAuth";
 import PhoneAuth from "./PhoneAuth";
+import AmazonAuth from "./AmazonAuth";
 
 export {
   GoogleAuth,
@@ -16,4 +17,5 @@ export {
   MicrosoftAuth,
   AppleAuth,
   PhoneAuth,
+  AmazonAuth,
 };

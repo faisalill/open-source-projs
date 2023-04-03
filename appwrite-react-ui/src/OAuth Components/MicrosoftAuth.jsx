@@ -5,9 +5,10 @@ const MicrosoftAuth = ({client, redirectURL}) => {
   const account = new Account(client)
   return (
     <button className="microsoft-auth-btn"
-    onClick={()=>{
-     account.createOAuth2Session('microsoft', redirectURL)
+    onClick={async ()=>{
+     await account.createOAuth2Session('microsoft', redirectURL, redirectURL)
     }}
+    aria-label='Sign in with Microsoft'
     ><MicrosoftSvg className='icon' /> &nbsp; Sign in with Microsoft</button>
   )
 }
