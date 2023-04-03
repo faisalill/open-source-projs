@@ -24,10 +24,11 @@ export default PhoneAuth
 const PhonePromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
  const [phone, setPhone] = useState('')
   const [id, setId] = useState('')
+  const [changeId, setchangeId] = useState(false)
   const [showVerificationPopup, setshowVerificationPopup] = useState(false)
   useEffect(() => {
     setId(uuidv4())
-  },[])
+  },[changeId])
   return(
     <>
     <div className={showPopup ? 'popup' : 'popup-closed'}
@@ -52,7 +53,6 @@ const PhonePromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
         onClick={(e)=>{
           e.preventDefault()
           setPhone('')
-          console.log(id)
           const promise = account.createPhoneSession(id, phone)
           promise.then((res)=>{
             setshowVerificationPopup(true)
@@ -62,13 +62,13 @@ const PhonePromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
         >Get Verification Code</button>
         </form>
      </div>
-      <VerificationPopup id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account}  />
+      <VerificationPopup changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account}  />
     </>
   )
 }
 
 
-const VerificationPopup = ({id, showVerificationPopup, setshowVerificationPopup,account}) =>{
+const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account}) =>{
   const [verificationCode, setverificationCode] = useState('')
   return(
     <>
@@ -94,10 +94,10 @@ const VerificationPopup = ({id, showVerificationPopup, setshowVerificationPopup,
         onClick={(e)=>{
           e.preventDefault()
           setverificationCode('')
-          console.log(id)
           const promise = account.updatePhoneSession(id, verificationCode)
           promise.then((res)=>{
-            console.log(res)
+            // console.log(res)
+            setchangeId(!changeId)
             setshowVerificationPopup(false)
           }
           )
