@@ -26,7 +26,7 @@ const App = () => {
     <DiscordAuth client={client} redirectURL="http://localhost:5173" />
     <SpotifyAuth client={client} redirectURL="http://localhost:5173"/>
     <TwitchAuth client={client} redirectURL="http://localhost:5173" />
-    <AppleAuth client={client} redirectURL="http://localhost:5173" />
+    {/* <AppleAuth client={client} redirectURL="http://localhost:5173" /> */}
     <PhoneAuth client={client} redirectURL="http://localhost:5173" />
     <button
     onClick={()=>{
