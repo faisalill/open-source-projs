@@ -16,6 +16,10 @@ $phone-auth-btn-bg: #02BD7E;
 $phone-auth-btn-text-color: #fff;
 $amazon-auth-btn-bg: #FF9900;
 $amazon-auth-btn-text-color: #fff;
+$auth0-auth-btn-bg: #EA5424;
+$auth0-auth-btn-text-color: #fff;
+$discord-auth-btn-bg: #5865F2;
+$discord-auth-btn-text-color: #fff;
 
 *{
   margin: 0;
@@ -232,6 +236,32 @@ body{
   color: $amazon-auth-btn-text-color;
   &:hover {
     background: darken($amazon-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.auth0-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $auth0-auth-btn-bg;
+  color: $auth0-auth-btn-text-color;
+  &:hover {
+    background: darken($auth0-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.discord-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $discord-auth-btn-bg;
+  color: $discord-auth-btn-text-color;
+  &:hover {
+    background: darken($discord-auth-btn-bg, 15%);
   }
   .icon{
     color: white;

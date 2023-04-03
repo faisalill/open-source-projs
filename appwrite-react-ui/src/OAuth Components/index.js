@@ -7,6 +7,8 @@ import MicrosoftAuth from "./MicrosoftAuth";
 import AppleAuth from "./AppleAuth";
 import PhoneAuth from "./PhoneAuth";
 import AmazonAuth from "./AmazonAuth";
+import AuthO from "./AuthO";
+
 
 export {
   GoogleAuth,
@@ -18,4 +20,5 @@ export {
   AppleAuth,
   PhoneAuth,
   AmazonAuth,
+  AuthO,
 };
