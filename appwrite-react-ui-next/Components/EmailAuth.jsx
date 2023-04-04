@@ -3,7 +3,7 @@ import {MdEmail} from 'react-icons/md'
 import { Account } from 'appwrite'
 import { v4 as uuidv4 } from 'uuid'
 
-const EmailAuth = ({client, successUrl, failureUrl}) => {
+const EmailAuth = ({client, successUrl, failureUrl,  Refresh, setRefresh, setLoading}) => {
   const [showPopup, setshowPopup] = useState(false)
   const account = new Account(client) 
   return (
@@ -14,7 +14,7 @@ const EmailAuth = ({client, successUrl, failureUrl}) => {
     }}
     ><MdEmail className='icon' /> &nbsp; Sign in with Email
     </button>
-    <EmailPromptPopup successUrl={successUrl} failureUrl={failureUrl} showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
+    <EmailPromptPopup successUrl={successUrl} failureUrl={failureUrl} showPopup={showPopup} setshowPopup={setshowPopup} account={account} Refresh={Refresh} setLoading={setLoading} setRefresh={setRefresh} />
     </>
   )
 }
@@ -22,7 +22,7 @@ const EmailAuth = ({client, successUrl, failureUrl}) => {
 export default EmailAuth
 
 
-const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failureUrl}) =>{
+const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failureUrl, Refresh, setRefresh, setLoading}) =>{
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [id, setId] = useState('')
@@ -80,13 +80,13 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
         >Get Verification Link</button>
         </form>
      </div>
-     <VerificationPopup changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account} />
+     <VerificationPopup Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading} changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account} />
     </>
   )
 }
 
 
-const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account}) =>{
+const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account, Refresh, setRefresh, setLoading}) =>{
   const [verificationCode, setverificationCode] = useState('')
   return(
     <>
@@ -100,7 +100,7 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
         e.stopPropagation()
       }}
       >
-        <label className='label'>Verification Link (check your mail inbox)</label>
+        <label className='label'>Verification Link (check your spam inbox too)</label>
         <input className='phoneNumber'  placeholder="Paste Verification Link " 
         value={verificationCode}
         onChange={(e)=>{
@@ -118,6 +118,8 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
             setchangeId(!changeId)
             setverificationCode('')
             setshowVerificationPopup(false)
+            setRefresh(!Refresh)
+            setLoading(true)
           }
           )
         }}

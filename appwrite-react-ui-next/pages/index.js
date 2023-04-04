@@ -67,8 +67,8 @@ const App = () => {
     <SpotifyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <TwitchAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     {/* <AppleAuth client={client} redirectURL="http://localhost:5173" /> */}
-    <EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
+    <EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
+    <PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
    
     {/* <button
     onClick={()=>{

@@ -3,7 +3,7 @@ import {FaPhoneAlt} from 'react-icons/fa'
 import { Account } from 'appwrite'
 import {v4 as uuidv4} from 'uuid'
 
-const PhoneAuth = ({client}) => {
+const PhoneAuth = ({client,  Refresh, setRefresh, setLoading}) => {
   const [showPopup, setshowPopup] = useState(false)
   const account = new Account(client)
   return (
@@ -13,7 +13,7 @@ const PhoneAuth = ({client}) => {
       setshowPopup(!showPopup)
     }}
     ><FaPhoneAlt className='icon' /> &nbsp; Sign in with Phone</button>
-    <PhonePromptPopup showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
+    <PhonePromptPopup Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading} showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
     </>
   )
 }
@@ -21,7 +21,7 @@ const PhoneAuth = ({client}) => {
 export default PhoneAuth
 
 
-const PhonePromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
+const PhonePromptPopup = ({showPopup, setshowPopup, account,  Refresh, setRefresh, setLoading}) =>{
  const [phone, setPhone] = useState('')
   const [id, setId] = useState('')
   const [changeId, setchangeId] = useState(false)
@@ -62,13 +62,13 @@ const PhonePromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
         >Get Verification Code</button>
         </form>
      </div>
-      <VerificationPopup changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account}  />
+      <VerificationPopup Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading} changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account}  />
     </>
   )
 }
 
 
-const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account}) =>{
+const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account,  Refresh, setRefresh, setLoading}) =>{
   const [verificationCode, setverificationCode] = useState('')
   return(
     <>
@@ -99,6 +99,8 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
             // console.log(res)
             setchangeId(!changeId)
             setshowVerificationPopup(false)
+            setRefresh(!Refresh)
+            setLoading(true)
           }
           )
         }}
