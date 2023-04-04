@@ -1,10 +1,9 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { Client, Account} from 'appwrite'
-import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from './OAuth Components'
+import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from './Components'
 const client = new Client()
-.setEndpoint('http://localhost:80/v1') // Your API Endpoint
-.setProject('642875d37aa84cef123e') // Your project ID
-
+.setEndpoint('https://appwrite-ui-helper.faisalill.tech/v1')
+.setProject('642bd7ca87828dbe6b8b');
 const account = new Account(client)
 const App = () => {
   // useEffect(() => {

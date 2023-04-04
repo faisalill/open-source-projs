@@ -101,7 +101,7 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
       }}
       >
         <label className='label'>Verification Link (check your mail inbox)</label>
-        <input className='phoneNumber'  placeholder="Enter Verification Link " 
+        <input className='phoneNumber'  placeholder="Paste Verification Link " 
         value={verificationCode}
         onChange={(e)=>{
           setverificationCode(e.target.value)

@@ -74,7 +74,7 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
     <>
     <div className={showVerificationPopup ? 'popup' : 'popup-closed'}
     onClick={()=>{
-      setshowVerificationPopup(false)
+      // setshowVerificationPopup(false)
     }}
     >
       <form className='form'
