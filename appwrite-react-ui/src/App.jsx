@@ -1,9 +1,12 @@
 import React from 'react'
 import { Client, Account} from 'appwrite'
 import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from './Components'
+
+require('dotenv').config()
+
 const client = new Client()
-.setEndpoint('https://appwrite-ui-helper.faisalill.tech/v1')
-.setProject('642bd7ca87828dbe6b8b');
+.setEndpoint(process.env.URL)
+.setProject(process.env.ID);
 const account = new Account(client)
 const App = () => {
   // useEffect(() => {
