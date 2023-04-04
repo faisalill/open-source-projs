@@ -7,8 +7,8 @@ const client = new Client()
 .setProject(process.env.NEXT_PUBLIC_ID);
 
 const App = () => {
-   let successUrl = 'http://localhost:3000/'
-    let failureUrl = 'http://localhost:3000/'
+   let successUrl = 'https://appwrite-ui-helper.vercel.app/'
+    let failureUrl = 'https://appwrite-ui-helper.vercel.app/'
   const account = new Account(client)
   const [user, setUser] = useState({name: "Not Logged in", email: "Not Logged in", emailVerification: false, phone: "Not Logged In ", phoneVerification: false})
   const [loading, setLoading] = useState(true)
