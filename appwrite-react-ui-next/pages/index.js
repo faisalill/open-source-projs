@@ -1,13 +1,14 @@
 import React from 'react'
 import { Client, Account} from 'appwrite'
-import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from './Components'
-
+import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from '../Components/index'
 
 const client = new Client()
-.setEndpoint('')
-.setProject('');
+.setEndpoint(process.env.NEXT_PUBLIC_URL)
+.setProject(process.env.NEXT_PUBLIC_ID);
 const account = new Account(client)
+
 const App = () => {
+
   return (
     <>
     <GoogleAuth client={client} redirectURL="http://localhost:5173"/>
