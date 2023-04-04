@@ -8,21 +8,22 @@ const client = new Client()
 const account = new Account(client)
 
 const App = () => {
-
+   let successUrl = 'http://localhost:3000/'
+    let failureUrl = 'http://localhost:3000/'
   return (
     <>
-    <GoogleAuth client={client} redirectURL="http://localhost:5173"/>
-    <FacebookAuth client={client} redirectURL="http://localhost:5173"/>
-    <GithubAuth client={client} redirectURL="http://localhost:5173"/>
-    <AmazonAuth client={client} redirectURL="http://localhost:5173"/>
-    <MicrosoftAuth client={client} redirectURL="http://localhost:5173" />
-    <AuthO client={client} redirectURL="http://localhost:5173" />
-    <DiscordAuth client={client} redirectURL="http://localhost:5173" />
-    <SpotifyAuth client={client} redirectURL="http://localhost:5173"/>
-    <TwitchAuth client={client} redirectURL="http://localhost:5173" />
+    <GoogleAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <FacebookAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <GithubAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <AmazonAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <MicrosoftAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
+    <AuthO client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <DiscordAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <SpotifyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <TwitchAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     {/* <AppleAuth client={client} redirectURL="http://localhost:5173" /> */}
-    <EmailAuth client={client} redirectURL="http://localhost:5173" />
-    <PhoneAuth client={client} redirectURL="http://localhost:5173" />
+    <EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
     <button
     onClick={()=>{
       account.deleteSessions('current')

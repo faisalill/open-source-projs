@@ -3,7 +3,7 @@ import {FaPhoneAlt} from 'react-icons/fa'
 import { Account } from 'appwrite'
 import {v4 as uuidv4} from 'uuid'
 
-const PhoneAuth = ({client, redirectURL}) => {
+const PhoneAuth = ({client}) => {
   const [showPopup, setshowPopup] = useState(false)
   const account = new Account(client)
   return (

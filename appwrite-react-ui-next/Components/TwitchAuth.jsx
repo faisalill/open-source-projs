@@ -3,12 +3,12 @@ import {FaTwitch} from 'react-icons/fa'
 import { Account } from 'appwrite'
 
 
-const TwitchAuth = ({client, redirectURL}) => {
+const TwitchAuth = ({client, successUrl, failureUrl}) => {
     const account = new Account(client)
   return (
     <button className="twitch-auth-btn"
     onClick={()=>{
-        account.createOAuth2Session('twitch', redirectURL)
+        account.createOAuth2Session('twitch', successUrl, failureUrl)
         }
     }
     ><FaTwitch className='icon' /> &nbsp; Sign in with Twitch</button>

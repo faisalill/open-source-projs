@@ -3,7 +3,7 @@ import {MdEmail} from 'react-icons/md'
 import { Account } from 'appwrite'
 import { v4 as uuidv4 } from 'uuid'
 
-const EmailAuth = ({client, redirectURL}) => {
+const EmailAuth = ({client, successUrl, failureUrl}) => {
   const [showPopup, setshowPopup] = useState(false)
   const account = new Account(client) 
   return (
@@ -14,7 +14,7 @@ const EmailAuth = ({client, redirectURL}) => {
     }}
     ><MdEmail className='icon' /> &nbsp; Sign in with Email
     </button>
-    <EmailPromptPopup redirectURL={redirectURL} showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
+    <EmailPromptPopup successUrl={successUrl} failureUrl={failureUrl} showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
     </>
   )
 }
@@ -22,7 +22,7 @@ const EmailAuth = ({client, redirectURL}) => {
 export default EmailAuth
 
 
-const EmailPromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
+const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failureUrl}) =>{
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [id, setId] = useState('')
@@ -73,7 +73,7 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, redirectURL}) =>{
           ).then((res)=>{
             account.createEmailSession(email, password)
             .then((res)=>{
-            account.createVerification(redirectURL)
+            account.createVerification(successUrl, failureUrl)
             })
           })
         }}

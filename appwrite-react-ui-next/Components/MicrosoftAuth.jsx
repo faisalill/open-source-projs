@@ -1,12 +1,12 @@
 import { Account } from 'appwrite'
 
 
-const MicrosoftAuth = ({client, redirectURL}) => {
+const MicrosoftAuth = ({client, successUrl, failureUrl}) => {
   const account = new Account(client)
   return (
     <button className="microsoft-auth-btn"
     onClick={async ()=>{
-     await account.createOAuth2Session('microsoft', redirectURL, redirectURL)
+     await account.createOAuth2Session('microsoft',successUrl, failureUrl)
     }}
     aria-label='Sign in with Microsoft'
     ><MicrosoftSvg className='icon' /> &nbsp; Sign in with Microsoft</button>
