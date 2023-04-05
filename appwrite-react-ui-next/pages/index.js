@@ -17,7 +17,6 @@ const App = () => {
 
   return (
     <>
-    
     {loading ? <div
     className='info-div'
     ><span className="loader"></span></div>

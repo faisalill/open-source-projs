@@ -1,16 +1,17 @@
 import { Account } from 'appwrite'
-
+import AuthButton from '../Helper/AuthButton'
 
 const MicrosoftAuth = ({client, successUrl, failureUrl}) => {
   const account = new Account(client)
   return (
-    <button className="microsoft-auth-btn"
-    onClick={async ()=>{
-     await account.createOAuth2Session('microsoft',successUrl, failureUrl)
-    }}
-    aria-label='Sign in with Microsoft'
-    ><MicrosoftSvg className='icon' /> &nbsp; Sign in with Microsoft</button>
-  )
+    // <button className="microsoft-auth-btn"
+    // onClick={ ()=>{
+    //  account.createOAuth2Session('microsoft',successUrl, failureUrl)
+    // }}
+    // aria-label='Sign in with Microsoft'
+    // ><MicrosoftSvg className='icon' /> &nbsp; Sign in with Microsoft</button>
+    <AuthButton account={account} btnClassName='microsoft-auth-btn' authProvider='microsoft' successUrl={successUrl} failureUrl={failureUrl} icon={<MicrosoftSvg className='icon' />} displayText='Sign in with Microsoft' />
+    )
 }
 
 export default MicrosoftAuth
