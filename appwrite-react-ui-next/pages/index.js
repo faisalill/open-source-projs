@@ -1,31 +1,19 @@
-import React, {useState, useEffect} from 'react'
 import { Client, Account} from 'appwrite'
-import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from '../Components/index'
-import axios from 'axios'
+import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from '../lib/Components/index'
+import useAuthUser from '@/lib/Hooks/useAuthUser';
 
 const client = new Client()
 .setEndpoint(process.env.NEXT_PUBLIC_URL)
 .setProject(process.env.NEXT_PUBLIC_ID);
+const account = new Account(client);
 
 
 const App = () => {
+  const {user, loading, Refresh, setRefresh, setLoading} = useAuthUser(account)
   let deploymentUrl = 'https://appwrite-ui-helper.vercel.app/'
    let successUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
     let failureUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
-  const account = new Account(client)
-  const [user, setUser] = useState({name: "Not Logged in", email: "Not Logged in", emailVerification: false, phone: "Not Logged In ", phoneVerification: false})
-  const [loading, setLoading] = useState(true)
-  const [Refresh, setRefresh] = useState(false)
 
-  useEffect(() => {
-    const promise = account.get();
-    promise.then(function (response) {
-      setUser(response)
-      setLoading(false)
-  }, function (error) {
-      setLoading(false)
-  });
-  }, [Refresh])
 
   return (
     <>
@@ -37,9 +25,9 @@ const App = () => {
      <div
      className='info-div'
      >
-    {user && <p>Name: &nbsp;<span className='info'>{user.name}</span></p>}
-    {user && <p>Email: &nbsp;<span className='info'>{user.email}</span></p>}
-    {user && <p>Phone: &nbsp;<span className='info'>{user.phone}</span></p>}
+    {user && <p>Name: &nbsp;<span className='info'>{user.name ? user.name : "Not Authorized"} </span></p>}
+    {user && <p>Email: &nbsp;<span className='info'>{user.email ? user.email : "Not Authorized"}</span></p>}
+    {user && <p>Phone: &nbsp;<span className='info'>{user.phone ? user.phone : "Not Authorized" }</span></p>}
     {user && <p>Email Verified: &nbsp; <span className='info'>{user.emailVerification ? 'yes' : 'no'}</span></p>}
     {user && <p>Phone Verified: &nbsp;<span className='info'>{user.phoneVerification ? 'yes': 'no'}</span></p>}
     <div >
@@ -47,7 +35,7 @@ const App = () => {
     className='sign-out-btn'
     onClick={()=>{
       account.deleteSessions('current').then((res)=>{
-        setUser({name: "Not Logged in", email: "Not Logged in", emailVerification: false, phone: "Not Logged In ", phoneVerification: false})
+        setUser({name: false, email: false, emailVerification: false, phone: false, phoneVerification: false})
       })
     }}
     >Sign Out</button>
@@ -73,7 +61,6 @@ const App = () => {
     {/* <AppleAuth client={client} redirectURL="http://localhost:5173" /> */}
     <EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
     <PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
-   
     {/* <button
     onClick={()=>{
       const promise = account.get();
