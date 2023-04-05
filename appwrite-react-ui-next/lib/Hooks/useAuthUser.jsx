@@ -13,7 +13,7 @@ const useAuthUser = (account) =>{
         setLoading(false)
     });
     }, [Refresh])
-    return {user, loading, Refresh, setRefresh, setLoading};
+    return {user, setUser,  loading, Refresh, setRefresh, setLoading};
 }
 
 export default useAuthUser

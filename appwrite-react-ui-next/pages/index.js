@@ -9,10 +9,10 @@ const account = new Account(client);
 
 
 const App = () => {
-  const {user, loading, Refresh, setRefresh, setLoading} = useAuthUser(account)
+  const {user,setUser,  loading, Refresh, setRefresh, setLoading} = useAuthUser(account)
   let deploymentUrl = 'https://appwrite-ui-helper.vercel.app/'
-   let successUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
-    let failureUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
+  let successUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
+  let failureUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
 
 
   return (
@@ -34,9 +34,12 @@ const App = () => {
     <button
     className='sign-out-btn'
     onClick={()=>{
+      user.email || user.phone  || user.name ? 
       account.deleteSessions('current').then((res)=>{
         setUser({name: false, email: false, emailVerification: false, phone: false, phoneVerification: false})
       })
+      :
+      console.log('No sessions to delete')
     }}
     >Sign Out</button>
      <button
