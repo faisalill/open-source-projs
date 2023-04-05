@@ -1,20 +1,23 @@
 import React, {useState, useEffect} from 'react'
 import { Client, Account} from 'appwrite'
 import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from '../Components/index'
+import axios from 'axios'
 
 const client = new Client()
 .setEndpoint(process.env.NEXT_PUBLIC_URL)
 .setProject(process.env.NEXT_PUBLIC_ID);
 
+
 const App = () => {
-   let successUrl = 'https://appwrite-ui-helper.vercel.app/'
-    let failureUrl = 'https://appwrite-ui-helper.vercel.app/'
+  let deploymentUrl = 'https://appwrite-ui-helper.vercel.app/'
+   let successUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
+    let failureUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
   const account = new Account(client)
   const [user, setUser] = useState({name: "Not Logged in", email: "Not Logged in", emailVerification: false, phone: "Not Logged In ", phoneVerification: false})
   const [loading, setLoading] = useState(true)
   const [Refresh, setRefresh] = useState(false)
+
   useEffect(() => {
-    console.log('refresh')
     const promise = account.get();
     promise.then(function (response) {
       setUser(response)
@@ -23,12 +26,13 @@ const App = () => {
       setLoading(false)
   });
   }, [Refresh])
+
   return (
     <>
     
     {loading ? <div
     className='info-div'
-    ><span class="loader"></span></div>
+    ><span className="loader"></span></div>
      : 
      <div
      className='info-div'
