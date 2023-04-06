@@ -37,7 +37,7 @@ import {
   // YandexAuth,
   // ZoomAuth,
   AppwriteAuthComponent,
-} from "../lib/Components/index";
+} from "../lib/Components";
 import useAuthUser from "@/lib/Hooks/useAuthUser";
 
 const client = new Client()
