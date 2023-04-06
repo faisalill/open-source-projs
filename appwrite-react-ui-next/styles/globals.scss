@@ -26,8 +26,52 @@ $twitch-auth-btn-bg: #9146FF;
 $twitch-auth-btn-text-color: #fff;
 $appwrite-purple:#F02E65;
 $appwrite-purple-light:#702340;
-
-
+$autodesk-auth-btn-bg: #000000;
+$autodesk-auth-btn-text-color: #fff;
+$bitbucket-auth-btn-bg: #2684FF;
+$bitbucket-auth-btn-text-color: #fff;
+$box-auth-btn-bg: #0061D5;
+$box-auth-btn-text-color: #fff;
+$dailymotion-auth-btn-bg: #000000;
+$dailymotion-auth-btn-text-color: #fff;
+$disqus-auth-btn-bg: #2AA0FF;
+$disqus-auth-btn-text-color: #fff;
+$dropbox-auth-btn-bg:#005FF7;
+$dropbox-auth-btn-text-color: #fff;
+$etsy-auth-btn-bg: #EC6102;
+$etsy-auth-btn-text-color: #fff;
+$gitlab-auth-btn-bg: #DB4128;
+$gitlab-auth-btn-text-color: #fff;
+$linkedin-auth-btn-bg: #0A63BC;
+$linkedin-auth-btn-text-color: #fff;
+$notion-auth-btn-bg: #0B0B0B;
+$notion-auth-btn-text-color: #fff;
+$okta-auth-btn-bg: #0079BB;
+$okta-auth-btn-text-color: #fff;
+$podio-auth-btn-bg: #057186;
+$podio-auth-btn-text-color: #fff;
+$slack-auth-btn-bg: #481449;
+$slack-auth-btn-text-color: #fff;
+$wordpress-auth-btn-bg: #207196;
+$wordpress-auth-btn-text-color: #fff;
+$yahoo-auth-btn-bg: #5320c4;
+$yahoo-auth-btn-text-color: #fff;
+$yandex-auth-btn-bg: #F71500;
+$yandex-auth-btn-text-color: #fff;
+$authentik-auth-btn-bg: #F5492C;
+$authentik-auth-btn-text-color: #fff;
+$paypal-auth-btn-bg: #27338e;
+$paypal-auth-btn-text-color: #fff;
+$salesforce-auth-btn-bg: #029cd9;
+$salesforce-auth-btn-text-color: #fff;
+$stripe-auth-btn-bg:#6057f7;
+$stripe-auth-btn-text-color: #fff;
+$tradeshift-auth-btn-bg: #0833E9;
+$tradeshift-auth-btn-text-color: #fff;
+$yammer-auth-btn-bg: #0174CD;
+$yammer-auth-btn-text-color: #fff;
+$zoom-auth-btn-bg: #0265F0;
+$zoom-auth-btn-text-color: #fff;
 
 
 
@@ -365,3 +409,18 @@ body{
       background-color: darken($appwrite-purple, 15%);
     }
   }
+
+  .autodesk-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $autodesk-auth-btn-bg;
+    color: $autodesk-auth-btn-text-color;
+    &:hover {
+      background: darken($autodesk-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  

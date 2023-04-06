@@ -11,7 +11,7 @@ return (
     //     account.createOAuth2Session('google', successUrl, failureUrl)
     // }}
     // >  <FcGoogle className='icon' /> &nbsp;  Sign in with Google</button>
-    <AuthButton account={account} btnClassName='google-auth-btn' authProvider='google' successUrl={successUrl} failureUrl={failureUrl} icon={<FcGoogle className='icon' />} displayText='Sign in with Google' />
+    <AuthButton account={account} btnClassName='google-auth-btn' authProvider='zoom' successUrl={successUrl} failureUrl={failureUrl} icon={<FcGoogle className='icon' />} displayText='Sign in with Google' />
     )
 }
 

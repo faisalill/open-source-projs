@@ -1,6 +1,7 @@
 import { Client, Account} from 'appwrite'
 import { GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth } from '../lib/Components/index'
 import useAuthUser from '@/lib/Hooks/useAuthUser';
+import AutodeskAuth from '@/lib/Components/AutodeskAuth';
 
 const client = new Client()
 .setEndpoint(process.env.NEXT_PUBLIC_URL)
@@ -60,7 +61,9 @@ const App = () => {
     <DiscordAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <SpotifyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <TwitchAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    {/* <AppleAuth client={client} redirectURL="http://localhost:5173" /> */}
+    <AppleAuth client={client} redirectURL="http://localhost:5173" />
+    <AutodeskAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    
     <EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
     <PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
     {/* <button
