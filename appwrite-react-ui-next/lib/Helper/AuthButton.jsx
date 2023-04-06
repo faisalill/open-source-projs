@@ -5,7 +5,7 @@ const AuthButton = ({account, btnClassName,authProvider,successUrl, failureUrl, 
     onClick={()=>{
         account.createOAuth2Session(authProvider, successUrl, failureUrl)
     }}
-    >  {icon} &nbsp;  {displayText}</button>
+    >  {icon} &nbsp;  <span>&nbsp;{displayText}</span></button>
   )
 }
 

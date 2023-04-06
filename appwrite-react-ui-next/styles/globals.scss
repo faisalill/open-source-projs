@@ -58,8 +58,8 @@ $yahoo-auth-btn-bg: #5320c4;
 $yahoo-auth-btn-text-color: #fff;
 $yandex-auth-btn-bg: #F71500;
 $yandex-auth-btn-text-color: #fff;
-$authentik-auth-btn-bg: #F5492C;
-$authentik-auth-btn-text-color: #fff;
+$authentik-auth-btn-bg: #fff;
+$authentik-auth-btn-text-color: #F5492C;
 $paypal-auth-btn-bg: #27338e;
 $paypal-auth-btn-text-color: #fff;
 $salesforce-auth-btn-bg: #029cd9;
@@ -72,7 +72,8 @@ $yammer-auth-btn-bg: #0174CD;
 $yammer-auth-btn-text-color: #fff;
 $zoom-auth-btn-bg: #0265F0;
 $zoom-auth-btn-text-color: #fff;
-
+$bitly-auth-btn-bg: #E74C1C;
+$bitly-auth-btn-text-color: #fff;
 
 
 
@@ -423,4 +424,313 @@ body{
     }
   }
 
+  .authentik-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $authentik-auth-btn-bg;
+    color: $authentik-auth-btn-text-color;
+    &:hover {
+      background: darken($authentik-auth-btn-bg, 15%);
+    }
+    .icon{
+      height: 40px; 
+      width: 40px; 
+      color: white; 
+
+    }
+  }
+
+  .bitbucket-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $bitbucket-auth-btn-bg;
+    color: $bitbucket-auth-btn-text-color;
+    &:hover {
+      background: darken($bitbucket-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .bitly-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $bitly-auth-btn-bg;
+    color: $bitly-auth-btn-text-color;
+    &:hover {
+      background: darken($bitly-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .box-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $box-auth-btn-bg;
+    color: $box-auth-btn-text-color;
+    &:hover {
+      background: darken($box-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .dailymotion-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $dailymotion-auth-btn-bg;
+    color: $dailymotion-auth-btn-text-color;
+    &:hover {
+      background: darken($dailymotion-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .disqus-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $disqus-auth-btn-bg;
+    color: $disqus-auth-btn-text-color;
+    &:hover {
+      background: darken($disqus-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .dropbox-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $dropbox-auth-btn-bg;
+    color: $dropbox-auth-btn-text-color;
+    &:hover {
+      background: darken($dropbox-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
   
+  .etsy-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $etsy-auth-btn-bg;
+    color: $etsy-auth-btn-text-color;
+    &:hover {
+      background: darken($etsy-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .gitlab-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $gitlab-auth-btn-bg;
+    color: $gitlab-auth-btn-text-color;
+    &:hover {
+      background: darken($gitlab-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .linkedin-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $linkedin-auth-btn-bg;
+    color: $linkedin-auth-btn-text-color;
+    &:hover {
+      background: darken($linkedin-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .notion-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $notion-auth-btn-bg;
+    color: $notion-auth-btn-text-color;
+    &:hover {
+      background: darken($notion-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .okta-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $okta-auth-btn-bg;
+    color: $okta-auth-btn-text-color;
+    &:hover {
+      background: darken($okta-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .paypal-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $paypal-auth-btn-bg;
+    color: $paypal-auth-btn-text-color;
+    &:hover {
+      background: darken($paypal-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .podio-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $podio-auth-btn-bg;
+    color: $podio-auth-btn-text-color;
+    &:hover {
+      background: darken($podio-auth-btn-bg, 15%);
+    }
+    .icon{
+      height: 30px; 
+      width: 30px;
+    }
+  }
+
+  .salesforce-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $salesforce-auth-btn-bg;
+    color: $salesforce-auth-btn-text-color;
+    &:hover {
+      background: darken($salesforce-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .slack-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $slack-auth-btn-bg;
+    color: $slack-auth-btn-text-color;
+    &:hover {
+      background: darken($slack-auth-btn-bg, 15%);
+    }
+    .icon{
+      transform: scale(0.45);
+    }
+  }
+
+  .stripe-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $stripe-auth-btn-bg;
+    color: $stripe-auth-btn-text-color;
+    &:hover {
+      background: darken($stripe-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .tradeshift-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $tradeshift-auth-btn-bg;
+    color: $tradeshift-auth-btn-text-color;
+    &:hover {
+      background: darken($tradeshift-auth-btn-bg, 15%);
+    }
+    span{
+      position: relative;
+    right: 13px;
+    }
+    .icon{
+      // height: 30px;
+      // width: 30px;
+      transform: scale(0.4)
+    }
+  }
+
+  .wordpress-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $wordpress-auth-btn-bg;
+    color: $wordpress-auth-btn-text-color;
+    &:hover {
+      background: darken($wordpress-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .yahoo-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $yahoo-auth-btn-bg;
+    color: $yahoo-auth-btn-text-color;
+    &:hover {
+      background: darken($yahoo-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .yammer-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $yammer-auth-btn-bg;
+    color: $yammer-auth-btn-text-color;
+    &:hover {
+      background: darken($yammer-auth-btn-bg, 15%);
+    }
+    .icon{
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+
+  .yandex-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $yandex-auth-btn-bg;
+    color: $yandex-auth-btn-text-color;
+    &:hover {
+      background: darken($yandex-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .zoom-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $zoom-auth-btn-bg;
+    color: $zoom-auth-btn-text-color;
+    &:hover {
+      background: darken($zoom-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
