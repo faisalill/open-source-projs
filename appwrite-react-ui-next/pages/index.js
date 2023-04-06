@@ -1,94 +1,361 @@
-import { Client, Account} from 'appwrite'
-import {YammerAuth, StripeAuth, BitBucketAuth, GoogleAuth, FacebookAuth,  GithubAuth,  MicrosoftAuth, AppleAuth, PhoneAuth, AmazonAuth, AuthO, DiscordAuth, SpotifyAuth, TwitchAuth, EmailAuth, AutodeskAuth, AuthentikAuth, BitlyAuth, BoxAuth, DailyMotionAuth, DisqusAuth, DropBoxAuth, EtsyAuth, GitlabAuth, LinkedinAuth, NotionAuth, OktaAuth, PaypalAuth, PodioAuth, SalesforceAuth, SlackAuth, TradeshiftAuth, WordpressAuth, YahooAuth, YandexAuth, ZoomAuth, } from '../lib/Components/index'
-import useAuthUser from '@/lib/Hooks/useAuthUser';
+import { Client, Account } from "appwrite";
+import {
+  // YammerAuth,
+  // StripeAuth,
+  // BitBucketAuth,
+  // GoogleAuth,
+  // FacebookAuth,
+  // GithubAuth,
+  // MicrosoftAuth,
+  // AppleAuth,
+  // PhoneAuth,
+  // AmazonAuth,
+  // AuthO,
+  // DiscordAuth,
+  // SpotifyAuth,
+  // TwitchAuth,
+  // EmailAuth,
+  // AutodeskAuth,
+  // AuthentikAuth,
+  // BitlyAuth,
+  // BoxAuth,
+  // DailyMotionAuth,
+  // DisqusAuth,
+  // DropBoxAuth,
+  // EtsyAuth,
+  // GitlabAuth,
+  // LinkedinAuth,
+  // NotionAuth,
+  // OktaAuth,
+  // PaypalAuth,
+  // PodioAuth,
+  // SalesforceAuth,
+  // SlackAuth,
+  // TradeshiftAuth,
+  // WordpressAuth,
+  // YahooAuth,
+  // YandexAuth,
+  // ZoomAuth,
+  AppwriteAuthComponent,
+} from "../lib/Components/index";
+import useAuthUser from "@/lib/Hooks/useAuthUser";
 
 const client = new Client()
-.setEndpoint(process.env.NEXT_PUBLIC_URL)
-.setProject(process.env.NEXT_PUBLIC_ID);
+  .setEndpoint(process.env.NEXT_PUBLIC_URL)
+  .setProject(process.env.NEXT_PUBLIC_ID);
 const account = new Account(client);
 
-
 const App = () => {
-  const {user,setUser,  loading, Refresh, setRefresh, setLoading} = useAuthUser(account)
-  let deploymentUrl = 'https://appwrite-ui-helper.vercel.app/'
-  let successUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
-  let failureUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' :  deploymentUrl
-
+  const { user, setUser, loading, Refresh, setRefresh, setLoading } =
+    useAuthUser(account);
+  let deploymentUrl = "https://appwrite-ui-helper.vercel.app/";
+  let successUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : deploymentUrl;
+  let failureUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : deploymentUrl;
 
   return (
     <>
-    {loading ? <div
-    className='info-div'
-    ><span className="loader"></span></div>
-     : 
-     <div
-     className='info-div'
-     >
-    {user && <p>Name: &nbsp;<span className='info'>{user.name ? user.name : "Not Authorized"} </span></p>}
-    {user && <p>Email: &nbsp;<span className='info'>{user.email ? user.email : "Not Authorized"}</span></p>}
-    {user && <p>Phone: &nbsp;<span className='info'>{user.phone ? user.phone : "Not Authorized" }</span></p>}
-    {user && <p>Email Verified: &nbsp; <span className='info'>{user.emailVerification ? 'yes' : 'no'}</span></p>}
-    {user && <p>Phone Verified: &nbsp;<span className='info'>{user.phoneVerification ? 'yes': 'no'}</span></p>}
-    <div >
-    <button
-    className='sign-out-btn'
-    onClick={()=>{
-      user.email || user.phone  || user.name ? 
-      account.deleteSessions('current').then((res)=>{
-        setUser({name: false, email: false, emailVerification: false, phone: false, phoneVerification: false})
-      })
-      :
-      console.log('No sessions to delete')
-    }}
-    >Sign Out</button>
-     <button
-    className='sign-out-btn'
-    onClick={()=>{
-      setRefresh(!Refresh)
-      setLoading(true)
-    }}
-    >Refresh</button>
-    </div>
-     </div>  
-  }
-    <GoogleAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <FacebookAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <GithubAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <AmazonAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <AuthO client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <DiscordAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <SpotifyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <TwitchAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
-    <PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
-    <AutodeskAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <BitBucketAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <BitlyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <DailyMotionAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <DisqusAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <DropBoxAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <GitlabAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <NotionAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <PodioAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <SlackAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <WordpressAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <YandexAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <ZoomAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <YammerAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <YahooAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <MicrosoftAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
-    <AppleAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
-    <AuthentikAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <BoxAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <EtsyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <LinkedinAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <OktaAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <PaypalAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <SalesforceAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <StripeAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <TradeshiftAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-        
-    {/* <button
+      {loading ? (
+        <div className="info-div">
+          <span className="loader"></span>
+        </div>
+      ) : (
+        <div className="info-div">
+          {user && (
+            <p>
+              Name: &nbsp;
+              <span className="info">
+                {user.name ? user.name : "Not Authorized"}{" "}
+              </span>
+            </p>
+          )}
+          {user && (
+            <p>
+              Email: &nbsp;
+              <span className="info">
+                {user.email ? user.email : "Not Authorized"}
+              </span>
+            </p>
+          )}
+          {user && (
+            <p>
+              Phone: &nbsp;
+              <span className="info">
+                {user.phone ? user.phone : "Not Authorized"}
+              </span>
+            </p>
+          )}
+          {user && (
+            <p>
+              Email Verified: &nbsp;{" "}
+              <span className="info">
+                {user.emailVerification ? "yes" : "no"}
+              </span>
+            </p>
+          )}
+          {user && (
+            <p>
+              Phone Verified: &nbsp;
+              <span className="info">
+                {user.phoneVerification ? "yes" : "no"}
+              </span>
+            </p>
+          )}
+          <div>
+            <button
+              className="sign-out-btn"
+              onClick={() => {
+                user.email || user.phone || user.name
+                  ? account.deleteSessions("current").then((res) => {
+                      setUser({
+                        name: false,
+                        email: false,
+                        emailVerification: false,
+                        phone: false,
+                        phoneVerification: false,
+                      });
+                    })
+                  : console.log("No sessions to delete");
+              }}
+            >
+              Sign Out
+            </button>
+            <button
+              className="sign-out-btn"
+              onClick={() => {
+                setRefresh(!Refresh);
+                setLoading(true);
+              }}
+            >
+              Refresh
+            </button>
+          </div>
+        </div>
+      )}
+      <AppwriteAuthComponent
+        authProvider="google"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="facebook"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="github"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="amazon"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent authProvider='auth0' client={client} successUrl={successUrl} failureUrl={failureUrl} />
+      <AppwriteAuthComponent
+        authProvider="discord"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="spotify"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='twitch'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="email"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+        Refresh={Refresh}
+        setRefresh={setRefresh}
+        setLoading={setLoading}
+      />
+      <AppwriteAuthComponent
+        authProvider="phone"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+        Refresh={Refresh}
+        setRefresh={setRefresh}
+        setLoading={setLoading}
+      />
+      <AppwriteAuthComponent
+        authProvider="autodesk"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='bitbucket'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="bitly"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="dailymotion"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='disqus'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="dropbox"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='gitlab'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="notion"
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='podio'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='slack'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='wordpress'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='yandex'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='zoom'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='yammer'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='yahoo'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='microsoft'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='apple'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='authentik'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='box'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='etsy'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='linkedin'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='okta'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='paypal'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='salesforce'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='stripe'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider='tradeshift'
+        client={client}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+
+      {/* <button
     onClick={()=>{
       const promise = account.get();
       promise.then(function (response) {
@@ -100,7 +367,7 @@ const App = () => {
     }
     >Check sessions</button> */}
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
