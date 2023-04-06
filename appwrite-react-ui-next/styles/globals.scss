@@ -12,7 +12,7 @@ $microsoft-auth-btn-bg: #2F2F2F;
 $microsoft-auth-btn-text-color: #fff;
 $apple-auth-btn-bg: #000000;
 $apple-auth-btn-text-color: #fff;
-$phone-auth-btn-bg: #02BD7E;
+$phone-auth-btn-bg: darken(#02BD7E, 5%);
 $phone-auth-btn-text-color: #fff;
 $amazon-auth-btn-bg: #FF9900;
 $amazon-auth-btn-text-color: #fff;
@@ -20,7 +20,7 @@ $auth0-auth-btn-bg: #EA5424;
 $auth0-auth-btn-text-color: #fff;
 $discord-auth-btn-bg: #5865F2;
 $discord-auth-btn-text-color: #fff;
-$spotify-auth-btn-bg: #1ED760;
+$spotify-auth-btn-bg: #1DD05E;
 $spotify-auth-btn-text-color: #fff;
 $twitch-auth-btn-bg: #9146FF;
 $twitch-auth-btn-text-color: #fff;
@@ -642,7 +642,7 @@ body{
     background: $stripe-auth-btn-bg;
     color: $stripe-auth-btn-text-color;
     &:hover {
-      background: darken($stripe-auth-btn-bg, 15%);
+      background: lighten($stripe-auth-btn-bg, 5%);
     }
     .icon{
       color: white;

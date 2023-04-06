@@ -55,41 +55,39 @@ const App = () => {
     <FacebookAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <GithubAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <AmazonAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <MicrosoftAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
     <AuthO client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <DiscordAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <SpotifyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <TwitchAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <AppleAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
     <EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
     <PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>
     <AutodeskAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <AuthentikAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <BitBucketAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <BitlyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <BoxAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <DailyMotionAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <DisqusAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <DropBoxAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <EtsyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <GitlabAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <LinkedinAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <NotionAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <OktaAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <PaypalAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <PodioAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <SalesforceAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <SlackAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <StripeAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <TradeshiftAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <WordpressAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <YahooAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-    <YammerAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <YandexAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
     <ZoomAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
-
-
-
+    <YammerAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <YahooAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <MicrosoftAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
+    <AppleAuth client={client} successUrl={successUrl} failureUrl={failureUrl} />
+    <AuthentikAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <BoxAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <EtsyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <LinkedinAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <OktaAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <PaypalAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <SalesforceAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <StripeAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+    <TradeshiftAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>
+        
     {/* <button
     onClick={()=>{
       const promise = account.get();
