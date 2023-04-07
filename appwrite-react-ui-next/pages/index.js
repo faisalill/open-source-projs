@@ -1,44 +1,11 @@
+import React from "react";
 import { Client, Account } from "appwrite";
 import {
-  // YammerAuth,
-  // StripeAuth,
-  // BitBucketAuth,
-  // GoogleAuth,
-  // FacebookAuth,
-  // GithubAuth,
-  // MicrosoftAuth,
-  // AppleAuth,
-  // PhoneAuth,
-  // AmazonAuth,
-  // AuthO,
-  // DiscordAuth,
-  // SpotifyAuth,
-  // TwitchAuth,
-  // EmailAuth,
-  // AutodeskAuth,
-  // AuthentikAuth,
-  // BitlyAuth,
-  // BoxAuth,
-  // DailyMotionAuth,
-  // DisqusAuth,
-  // DropBoxAuth,
-  // EtsyAuth,
-  // GitlabAuth,
-  // LinkedinAuth,
-  // NotionAuth,
-  // OktaAuth,
-  // PaypalAuth,
-  // PodioAuth,
-  // SalesforceAuth,
-  // SlackAuth,
-  // TradeshiftAuth,
-  // WordpressAuth,
-  // YahooAuth,
-  // YandexAuth,
-  // ZoomAuth,
   AppwriteAuthComponent,
 } from "../lib/Components";
 import useAuthUser from "@/lib/Hooks/useAuthUser";
+
+
 
 const client = new Client()
   .setEndpoint(process.env.NEXT_PUBLIC_URL)
