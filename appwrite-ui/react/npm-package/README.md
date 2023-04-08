@@ -1,5 +1,4 @@
 # Appwrite UI Auth Components for Web
-
 ## Table of Contents
 1. [Demo](#demo)
 1. [About](#about)
@@ -10,14 +9,14 @@
 1. [Auth Providers](#auth-providers)
 1. [Contributing](#contributing)
 
-##Demo {#demo}
+## Demo <a name="demo"></a>
 You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwrite-ui-react.vercel.app).
-![](./images//auth-components.png)
+![](./images/auth-components.png)
 
-##About {#about}
+## About <a name="about"></a>
 Appwrite UI is an open source React library that provides a set of reusable components for building your own UI for Appwrite. It is built on top of React and [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web).
 
-### Features {#features}
+### Features <a name="features"></a>
 Appwrite UI Auth Components for Web includes a range of features to simplify the process of implementing authentication and user management in your React projects. Some of the key features include:
 
 - A collection of pre-built, fully styled authentication components, including email and phone number login.
@@ -26,12 +25,12 @@ Appwrite UI Auth Components for Web includes a range of features to simplify the
 - Simple integration with your existing React project.
 
 ## Getting Started
-### Installation {#installation}
+### Installation <a name="installation"></a>
 Install it using npm: 
 ```bash
 npm install appwriteui-react;
 ```
-### Usage {#usage}
+### Usage <a name="usage"></a>
 Import the Appwrite Auth Component in your React project and pass it props to configure it for different authentication providers. For example, to add a google login button, you can use the following code:
 ```js
 import {Client} from 'appwrite';
@@ -57,7 +56,7 @@ The output will be a component as shown below, clicking on it will redirect the 
 ![](./images/google-auth-btn.png)
 
 
-### Configuration {#configuration}
+### Configuration <a name="configuration"></a>
 You can pass the following props to configure the Appwrite Auth Component:
 ```jsx
 <AppwriteAuthComponent
@@ -74,7 +73,7 @@ You can pass the following props to configure the Appwrite Auth Component:
 | `sucessUrl` | yes | Url to redirect the user when authentication is successful.|
 | `failureUrl` | yes | Url to redirect the user when authentication is unsuccessful.|
 
-#### Auth Providers {#auth-providers}
+#### Auth Providers <a name="auth-providers"></a
 > Note: You can use any of the following auth providers for authentication. Make sure to have the corresponding login enabled in your appwrite project with the correct credentials.
 
 | Auth Provider | Code | 
@@ -117,5 +116,5 @@ You can pass the following props to configure the Appwrite Auth Component:
 | `Tradeshift` |   ```authProvider='tradeshift'```|
 
 
-## Contributing {#contributing}
+## Contributing <a name="contributing"></a>
 We would love to see your contributions, whether it's a new feature, bug fix, or just improvement to the documentation. If you are interested in contributing to Appwrite UI, please read our [Contributing Guide](./CONTRIBUTING.md).

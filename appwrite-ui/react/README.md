@@ -1,11 +1,4 @@
-# Contributing to AppwriteUi
-Thank you for your interest in contributing to this project! This document outlines the guidelines for contributing to this project. Proceed by reading the Skills section below and pick your framework of choice.
-
->Note: You must know React and Sass/CSS to contribute to this project. If you are not familiar with Sass, you can learn more about it [here](https://www.youtube.com/watch?v=akDIJa0AP5c).
-
-
 # Appwrite UI Auth Components for Web
-
 ## Table of Contents
 1. [Demo](#demo)
 1. [About](#about)
@@ -18,7 +11,7 @@ Thank you for your interest in contributing to this project! This document outli
 
 ## Demo <a name="demo"></a>
 You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwrite-ui-react.vercel.app).
-![](./images//auth-components.png)
+![](./npm-package/images/auth-components.png)
 
 ## About <a name="about"></a>
 Appwrite UI is an open source React library that provides a set of reusable components for building your own UI for Appwrite. It is built on top of React and [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web).
@@ -60,7 +53,7 @@ const failureUrl = 'redirect url when the authenticaion is unsuccessfull';
 
 ```
 The output will be a component as shown below, clicking on it will redirect the user to the google login page and then redirect the user to the successUrl or failureUrl based on the authentication result (make sure to have google login enabled in your appwrite project with the correct credentials):
-![](./images/google-auth-btn.png)
+![](./npm-package/images/google-auth-btn.png)
 
 
 ### Configuration <a name="configuration"></a>

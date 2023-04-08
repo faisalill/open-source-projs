@@ -1,9 +1,14 @@
 {
   "name": "appwriteui-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Pre styled Auth Components to use in a react project with appwrite.",
   "main": "index.js",
   "type": "module",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faisalill/open-source-projs/tree/main/appwrite-ui/react/npm-package"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js"
