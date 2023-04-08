@@ -1,8 +1,3 @@
-<style>
-h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
-    visibility: hidden;
-}
-</style>
 # Contributing to AppwriteUi
 Thank you for your interest in contributing to this project! This document outlines the guidelines for contributing to this project. Proceed by reading the Skills section below and pick your framework of choice.
 
@@ -21,7 +16,7 @@ Thank you for your interest in contributing to this project! This document outli
 1. [Auth Providers](#auth-providers)
 1. [Contributing](#contributing)
 
-##Demo{#demo}
+##Demo <a name="demo"></a>
 You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwrite-ui-react.vercel.app).
 ![](./images//auth-components.png)
 
