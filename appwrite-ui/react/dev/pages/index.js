@@ -4,7 +4,7 @@ import {
   AppwriteAuthComponent,
 } from "../lib/Components";
 import useAuthUser from "@/lib/Hooks/useAuthUser";
-
+// import {AppwriteAuthComponent, useAuthUser} from 'appwriteui-react'
 
 
 const client = new Client()
