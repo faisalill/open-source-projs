@@ -10,7 +10,7 @@
 1. [Auth Providers](#auth-providers)
 1. [Contributing](#contributing)
 
-##Demo {#demo}
+##Demo{#demo}
 You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwrite-ui-react.vercel.app).
 ![](./images//auth-components.png)
 
