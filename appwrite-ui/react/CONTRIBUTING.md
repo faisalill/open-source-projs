@@ -1,5 +1,5 @@
 # Contributing to AppwriteUi
-Thank you for your interest in contributing to this project! This document outlines the guidelines for contributing to this project. Proceed by reading the Skills section below and pick your framework of choice.
+Thank you for your interest in contributing to this project! This document outlines the guidelines for contributing to this project.
 
 >Note: You must know React and Sass/CSS to contribute to this project. If you are not familiar with Sass, you can learn more about it [here](https://www.youtube.com/watch?v=akDIJa0AP5c).
 
