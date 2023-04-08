@@ -1,0 +1,771 @@
+$google-auth-btn-bg: #fff;
+$google-auth-btn-text-color: #7A7A7A;
+$facebook-auth-btn-bg: #3B5998;
+$facebook-auth-btn-text-color: #fff;
+$twitter-auth-btn-bg: #55ACEE;
+$twitter-auth-btn-text-color: #fff;
+$github-auth-btn-bg: #333333;
+$github-auth-btn-text-color: #fff;
+$email-auth-btn-bg: #DB4437;
+$email-auth-btn-text-color: #fff;
+$microsoft-auth-btn-bg: #2F2F2F;
+$microsoft-auth-btn-text-color: #fff;
+$apple-auth-btn-bg: #000000;
+$apple-auth-btn-text-color: #fff;
+$phone-auth-btn-bg: darken(#02BD7E, 5%);
+$phone-auth-btn-text-color: #fff;
+$amazon-auth-btn-bg: #FF9900;
+$amazon-auth-btn-text-color: #fff;
+$auth0-auth-btn-bg: #EA5424;
+$auth0-auth-btn-text-color: #fff;
+$discord-auth-btn-bg: #5865F2;
+$discord-auth-btn-text-color: #fff;
+$spotify-auth-btn-bg: #1DD05E;
+$spotify-auth-btn-text-color: #fff;
+$twitch-auth-btn-bg: #9146FF;
+$twitch-auth-btn-text-color: #fff;
+$appwrite-purple:#F02E65;
+$appwrite-purple-light:#702340;
+$autodesk-auth-btn-bg: #000000;
+$autodesk-auth-btn-text-color: #fff;
+$bitbucket-auth-btn-bg: #2684FF;
+$bitbucket-auth-btn-text-color: #fff;
+$box-auth-btn-bg: #0061D5;
+$box-auth-btn-text-color: #fff;
+$dailymotion-auth-btn-bg: #000000;
+$dailymotion-auth-btn-text-color: #fff;
+$disqus-auth-btn-bg: #2AA0FF;
+$disqus-auth-btn-text-color: #fff;
+$dropbox-auth-btn-bg:#005FF7;
+$dropbox-auth-btn-text-color: #fff;
+$etsy-auth-btn-bg: #EC6102;
+$etsy-auth-btn-text-color: #fff;
+$gitlab-auth-btn-bg: #DB4128;
+$gitlab-auth-btn-text-color: #fff;
+$linkedin-auth-btn-bg: #0A63BC;
+$linkedin-auth-btn-text-color: #fff;
+$notion-auth-btn-bg: #0B0B0B;
+$notion-auth-btn-text-color: #fff;
+$okta-auth-btn-bg: #0079BB;
+$okta-auth-btn-text-color: #fff;
+$podio-auth-btn-bg: #057186;
+$podio-auth-btn-text-color: #fff;
+$slack-auth-btn-bg: #481449;
+$slack-auth-btn-text-color: #fff;
+$wordpress-auth-btn-bg: #207196;
+$wordpress-auth-btn-text-color: #fff;
+$yahoo-auth-btn-bg: #5320c4;
+$yahoo-auth-btn-text-color: #fff;
+$yandex-auth-btn-bg: #F71500;
+$yandex-auth-btn-text-color: #fff;
+$authentik-auth-btn-bg: #fff;
+$authentik-auth-btn-text-color: #F5492C;
+$paypal-auth-btn-bg: #27338e;
+$paypal-auth-btn-text-color: #fff;
+$salesforce-auth-btn-bg: #029cd9;
+$salesforce-auth-btn-text-color: #fff;
+$stripe-auth-btn-bg:#6057f7;
+$stripe-auth-btn-text-color: #fff;
+$tradeshift-auth-btn-bg: #0833E9;
+$tradeshift-auth-btn-text-color: #fff;
+$yammer-auth-btn-bg: #0174CD;
+$yammer-auth-btn-text-color: #fff;
+$zoom-auth-btn-bg: #0265F0;
+$zoom-auth-btn-text-color: #fff;
+$bitly-auth-btn-bg: #E74C1C;
+$bitly-auth-btn-text-color: #fff;
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin auth-btn{
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  // padding: 10px 16px;
+  width: 250px;
+  height: 45px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease, border-color 0.3s ease;
+  border-radius: 4px;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  .icon{
+    font-size: 24px;
+  }
+}
+
+
+.google-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $google-auth-btn-bg;
+  color: $google-auth-btn-text-color;
+  &:hover {
+    background: darken($google-auth-btn-bg, 15%);
+    border-color: darken($google-auth-btn-bg, 15%);
+  }
+  
+}
+
+.facebook-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $facebook-auth-btn-bg;
+  color: $facebook-auth-btn-text-color;
+  &:hover {
+    background: darken($facebook-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.twitter-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $twitter-auth-btn-bg;
+  color: $twitter-auth-btn-text-color;
+  &:hover {
+    background: darken($twitter-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.github-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $github-auth-btn-bg;
+  color: $github-auth-btn-text-color;
+  &:hover {
+    background: darken($github-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.email-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $email-auth-btn-bg;
+  color: $email-auth-btn-text-color;
+  &:hover {
+    background: darken($email-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.microsoft-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $microsoft-auth-btn-bg;
+  color: $microsoft-auth-btn-text-color;
+  &:hover {
+    background: darken($microsoft-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.apple-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $apple-auth-btn-bg;
+  color: $apple-auth-btn-text-color;
+  &:hover {
+    background: darken($apple-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.phone-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $phone-auth-btn-bg;
+  color: $phone-auth-btn-text-color;
+  &:hover {
+    background: darken($phone-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.popup{
+  $bg: #1B1B27;
+  $text-color: #FAFAFF;
+  $button-bg:#db1a5b;
+ position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family:  'Inter', "arial", sans-serif;
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    background-color:  $bg;
+    .label{
+      font-size: 20px;
+      color: $text-color; 
+      font-weight: 700;
+    }
+    .email{
+      padding: 10px;
+      border: 1px solid lighten($button-bg, 10%);
+      border-radius: 5px;
+      background-color: darken($bg, 10%);
+      color: $text-color;
+      &::placeholder{
+        color: $text-color;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    .password-input-wrapper{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .password{
+      padding: 10px;
+      border: 1px solid lighten($button-bg, 10%);
+      border-radius: 5px;
+      background-color: darken($bg, 10%);
+      color: $text-color;
+      &::placeholder{
+        color: $text-color;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+       
+     .show-password{
+      color: white;
+      font-size: 18px;
+     }   
+     
+     .phoneNumber{
+      padding: 10px;
+      border: 1px solid lighten($button-bg, 10%);
+      border-radius: 5px;
+      background-color: darken($bg, 10%);
+      color: $text-color;
+      &::placeholder{
+        color: $text-color;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .submit{
+      padding: 10px;
+      // border: 1px solid $email-auth-btn-bg;
+      border: none;
+      border-radius: 5px;
+      background-color: $button-bg;
+      color: white;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        cursor: pointer;
+        background-color: darken($button-bg, 15%);
+      }
+    }
+
+  }
+}
+.popup-closed{
+  display: none;
+}
+
+
+.amazon-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $amazon-auth-btn-bg;
+  color: $amazon-auth-btn-text-color;
+  &:hover {
+    background: darken($amazon-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.auth0-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $auth0-auth-btn-bg;
+  color: $auth0-auth-btn-text-color;
+  &:hover {
+    background: darken($auth0-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.discord-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $discord-auth-btn-bg;
+  color: $discord-auth-btn-text-color;
+  &:hover {
+    background: lighten($discord-auth-btn-bg, 5%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.spotify-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $spotify-auth-btn-bg;
+  color: $spotify-auth-btn-text-color;
+  &:hover {
+    background: darken($spotify-auth-btn-bg, 15%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.twitch-auth-btn{
+  @include flex-center;
+  @include auth-btn;
+  background: $twitch-auth-btn-bg;
+  color: $twitch-auth-btn-text-color;
+  &:hover {
+    background: lighten($twitch-auth-btn-bg, 5%);
+  }
+  .icon{
+    color: white;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid $appwrite-purple;
+  border-bottom-color: $appwrite-purple-light;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+
+  .info-div{
+    display: grid;
+    place-items: center;
+    border: 2px solid $appwrite-purple;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    p{
+      font-size: 17px;
+      color: $discord-auth-btn-bg;
+    }
+    .info{
+      color: $appwrite-purple;
+    }
+  }
+
+  .sign-out-btn{
+    padding: 10px;
+    border: 2px solid $appwrite-purple;
+    border-radius: 5px;
+    background-color: $appwrite-purple;
+    margin: 10px;
+    color: white;
+    &:hover{
+      cursor: pointer;
+      background-color: darken($appwrite-purple, 15%);
+    }
+  }
+
+  .autodesk-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $autodesk-auth-btn-bg;
+    color: $autodesk-auth-btn-text-color;
+    &:hover {
+      background: darken($autodesk-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .authentik-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $authentik-auth-btn-bg;
+    color: $authentik-auth-btn-text-color;
+    &:hover {
+      background: darken($authentik-auth-btn-bg, 15%);
+    }
+    .icon{
+      height: 40px; 
+      width: 40px; 
+      color: white; 
+
+    }
+  }
+
+  .bitbucket-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $bitbucket-auth-btn-bg;
+    color: $bitbucket-auth-btn-text-color;
+    &:hover {
+      background: darken($bitbucket-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .bitly-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $bitly-auth-btn-bg;
+    color: $bitly-auth-btn-text-color;
+    &:hover {
+      background: darken($bitly-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .box-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $box-auth-btn-bg;
+    color: $box-auth-btn-text-color;
+    &:hover {
+      background: darken($box-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .dailymotion-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $dailymotion-auth-btn-bg;
+    color: $dailymotion-auth-btn-text-color;
+    &:hover {
+      background: darken($dailymotion-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .disqus-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $disqus-auth-btn-bg;
+    color: $disqus-auth-btn-text-color;
+    &:hover {
+      background: darken($disqus-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .dropbox-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $dropbox-auth-btn-bg;
+    color: $dropbox-auth-btn-text-color;
+    &:hover {
+      background: darken($dropbox-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+  
+  .etsy-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $etsy-auth-btn-bg;
+    color: $etsy-auth-btn-text-color;
+    &:hover {
+      background: darken($etsy-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .gitlab-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $gitlab-auth-btn-bg;
+    color: $gitlab-auth-btn-text-color;
+    &:hover {
+      background: darken($gitlab-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .linkedin-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $linkedin-auth-btn-bg;
+    color: $linkedin-auth-btn-text-color;
+    &:hover {
+      background: darken($linkedin-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .notion-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $notion-auth-btn-bg;
+    color: $notion-auth-btn-text-color;
+    &:hover {
+      background: darken($notion-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .okta-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $okta-auth-btn-bg;
+    color: $okta-auth-btn-text-color;
+    &:hover {
+      background: darken($okta-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .paypal-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $paypal-auth-btn-bg;
+    color: $paypal-auth-btn-text-color;
+    &:hover {
+      background: darken($paypal-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .podio-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $podio-auth-btn-bg;
+    color: $podio-auth-btn-text-color;
+    &:hover {
+      background: darken($podio-auth-btn-bg, 15%);
+    }
+    .icon{
+      height: 30px; 
+      width: 30px;
+    }
+  }
+
+  .salesforce-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $salesforce-auth-btn-bg;
+    color: $salesforce-auth-btn-text-color;
+    &:hover {
+      background: darken($salesforce-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .slack-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $slack-auth-btn-bg;
+    color: $slack-auth-btn-text-color;
+    &:hover {
+      background: darken($slack-auth-btn-bg, 15%);
+    }
+    .icon{
+      transform: scale(0.45);
+      position: relative;
+    }
+  }
+
+  .stripe-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $stripe-auth-btn-bg;
+    color: $stripe-auth-btn-text-color;
+    &:hover {
+      background: lighten($stripe-auth-btn-bg, 5%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .tradeshift-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $tradeshift-auth-btn-bg;
+    color: $tradeshift-auth-btn-text-color;
+    &:hover {
+      background: darken($tradeshift-auth-btn-bg, 15%);
+    }
+    span{
+      position: relative;
+    right: 13px;
+    }
+    .icon{
+      // height: 30px;
+      // width: 30px;
+      transform: scale(0.4)
+    }
+  }
+
+  .wordpress-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $wordpress-auth-btn-bg;
+    color: $wordpress-auth-btn-text-color;
+    &:hover {
+      background: darken($wordpress-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .yahoo-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $yahoo-auth-btn-bg;
+    color: $yahoo-auth-btn-text-color;
+    &:hover {
+      background: darken($yahoo-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .yammer-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $yammer-auth-btn-bg;
+    color: $yammer-auth-btn-text-color;
+    &:hover {
+      background: darken($yammer-auth-btn-bg, 15%);
+    }
+    .icon{
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+
+  .yandex-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $yandex-auth-btn-bg;
+    color: $yandex-auth-btn-text-color;
+    &:hover {
+      background: darken($yandex-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .zoom-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $zoom-auth-btn-bg;
+    color: $zoom-auth-btn-text-color;
+    &:hover {
+      background: darken($zoom-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .components-showcase{
+    display: flex;
+    flex-direction: row;
+  }
