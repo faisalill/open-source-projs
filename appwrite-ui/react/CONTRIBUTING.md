@@ -1,3 +1,8 @@
+<style>
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+    visibility: hidden;
+}
+</style>
 # Contributing to AppwriteUi
 Thank you for your interest in contributing to this project! This document outlines the guidelines for contributing to this project. Proceed by reading the Skills section below and pick your framework of choice.
 
