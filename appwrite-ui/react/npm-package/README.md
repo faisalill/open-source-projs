@@ -11,7 +11,7 @@
 
 ## Demo <a name="demo"></a>
 You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwrite-ui-react.vercel.app).
-![](./images/auth-components.png)
+![](./npm-package/images/auth-components.png)
 
 ## About <a name="about"></a>
 Appwrite UI is an open source React library that provides a set of reusable components for building your own UI for Appwrite. It is built on top of React and [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web).
@@ -31,10 +31,11 @@ Install it using npm:
 npm install appwriteui-react;
 ```
 ### Usage <a name="usage"></a>
-Import the Appwrite Auth Component in your React project and pass it props to configure it for different authentication providers. For example, to add a google login button, you can use the following code:
+Import the Appwrite Auth Component in your React project along with the css file and pass it props to configure it for different authentication providers. For example, to add a google login button, you can use the following code:
 ```js
 import {Client} from 'appwrite';
 import {AppwriteAuthComponent} from 'appwriteui-react';
+import 'appwriteui-react/index.css'
 
 const client = new Client()
 .setEndpoint(...)// Your Appwrite Endpoint
@@ -53,8 +54,8 @@ const failureUrl = 'redirect url when the authenticaion is unsuccessfull';
 
 ```
 The output will be a component as shown below, clicking on it will redirect the user to the google login page and then redirect the user to the successUrl or failureUrl based on the authentication result (make sure to have google login enabled in your appwrite project with the correct credentials):
-![](./images/google-auth-btn.png)
-
+![](./npm-package/images/google-auth-btn.png)
+> Make sure to import the css file as shown above to get the styling of the components.
 
 ### Configuration <a name="configuration"></a>
 You can pass the following props to configure the Appwrite Auth Component:
