@@ -13,8 +13,7 @@ const client = new Client()
 const account = new Account(client);
 
 const App = () => {
-  const { user, setUser, loading, Refresh, setRefresh, setLoading } =
-    useAuthUser(account);
+  const { user, setUser, loading, Refresh, setRefresh, setLoading } = useAuthUser(account);
   let deploymentUrl = "https://appwrite-ui-helper.vercel.app/";
   let successUrl =
     process.env.NODE_ENV === "development"
@@ -104,6 +103,13 @@ const App = () => {
           </div>
         </div>
       )}
+      <div className="component-showcase"
+      style={{
+        display: "flex",
+        flexDirection: "row",
+      }}
+      >
+        <div>
       <AppwriteAuthComponent
         authProvider="google"
         client={client}
@@ -152,18 +158,12 @@ const App = () => {
         client={client}
         successUrl={successUrl}
         failureUrl={failureUrl}
-        Refresh={Refresh}
-        setRefresh={setRefresh}
-        setLoading={setLoading}
       />
       <AppwriteAuthComponent
         authProvider="phone"
         client={client}
         successUrl={successUrl}
         failureUrl={failureUrl}
-        Refresh={Refresh}
-        setRefresh={setRefresh}
-        setLoading={setLoading}
       />
       <AppwriteAuthComponent
         authProvider="autodesk"
@@ -177,6 +177,8 @@ const App = () => {
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
+      </div>
+      <div>
       <AppwriteAuthComponent
         authProvider="bitly"
         client={client}
@@ -249,6 +251,8 @@ const App = () => {
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
+      </div>
+      <div>
       <AppwriteAuthComponent
         authProvider='yahoo'
         client={client}
@@ -321,6 +325,8 @@ const App = () => {
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
+      </div>
+      </div>
 
       {/* <button
     onClick={()=>{

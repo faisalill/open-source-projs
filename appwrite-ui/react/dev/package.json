@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sass-compile": "sass --no-source-map ./styles/globals.scss ./lib/index.css"
   },
   "dependencies": {
     "@next/font": "13.2.4",

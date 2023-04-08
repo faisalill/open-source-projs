@@ -1,2 +1,0 @@
-# Appwrite UI Auth Components for Web
-Appwrite UI is an open source React library that provides a set of styled and functional Auth components for integration in your react project which uses [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web) as its backend. It is built on top of React and [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web).

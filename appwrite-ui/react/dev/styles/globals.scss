@@ -224,51 +224,79 @@ body{
 }
 
 .popup{
+  $bg: #1B1B27;
+  $text-color: #FAFAFF;
+  $button-bg:#db1a5b;
  position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 2;
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family:  'Inter', "arial", sans-serif;
   .form{
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
-    background-color: white;
     border-radius: 5px;
-    border : 3px solid $email-auth-btn-bg;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    background-color:  $bg;
     .label{
       font-size: 20px;
-      color: lighten($email-auth-btn-bg, 10%); 
+      color: $text-color; 
+      font-weight: 700;
     }
-
     .email{
       padding: 10px;
-      border: 1px solid $email-auth-btn-bg;
+      border: 1px solid lighten($button-bg, 10%);
       border-radius: 5px;
+      background-color: darken($bg, 10%);
+      color: $text-color;
+      &::placeholder{
+        color: $text-color;
+      }
       &:focus{
         outline: none;
       }
     }
-
+    .password-input-wrapper{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     .password{
       padding: 10px;
-      border: 1px solid $email-auth-btn-bg;
+      border: 1px solid lighten($button-bg, 10%);
       border-radius: 5px;
+      background-color: darken($bg, 10%);
+      color: $text-color;
+      &::placeholder{
+        color: $text-color;
+      }
       &:focus{
         outline: none;
       }
     }
        
+     .show-password{
+      color: white;
+      font-size: 18px;
+     }   
+     
      .phoneNumber{
       padding: 10px;
-      border: 1px solid $email-auth-btn-bg;
+      border: 1px solid lighten($button-bg, 10%);
       border-radius: 5px;
+      background-color: darken($bg, 10%);
+      color: $text-color;
+      &::placeholder{
+        color: $text-color;
+      }
       &:focus{
         outline: none;
       }
@@ -276,16 +304,17 @@ body{
 
     .submit{
       padding: 10px;
-      border: 1px solid $email-auth-btn-bg;
+      // border: 1px solid $email-auth-btn-bg;
+      border: none;
       border-radius: 5px;
-      background-color: $email-auth-btn-bg;
+      background-color: $button-bg;
       color: white;
       &:focus{
         outline: none;
       }
       &:hover{
         cursor: pointer;
-        background-color: darken($email-auth-btn-bg, 15%);
+        background-color: darken($button-bg, 15%);
       }
     }
 
@@ -633,6 +662,7 @@ body{
     }
     .icon{
       transform: scale(0.45);
+      position: relative;
     }
   }
 
@@ -733,4 +763,9 @@ body{
     .icon{
       color: white;
     }
+  }
+
+  .components-showcase{
+    display: flex;
+    flex-direction: row;
   }

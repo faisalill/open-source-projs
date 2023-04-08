@@ -268,56 +268,82 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 2;
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Inter", "arial", sans-serif;
 }
 .popup .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  background-color: white;
   border-radius: 5px;
-  border: 3px solid #DB4437;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  background-color: #1B1B27;
 }
 .popup .form .label {
   font-size: 20px;
-  color: #e36c62;
+  color: #FAFAFF;
+  font-weight: 700;
 }
 .popup .form .email {
   padding: 10px;
-  border: 1px solid #DB4437;
+  border: 1px solid #e84078;
   border-radius: 5px;
+  background-color: #060609;
+  color: #FAFAFF;
+}
+.popup .form .email::placeholder {
+  color: #FAFAFF;
 }
 .popup .form .email:focus {
   outline: none;
 }
+.popup .form .password-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .popup .form .password {
   padding: 10px;
-  border: 1px solid #DB4437;
+  border: 1px solid #e84078;
   border-radius: 5px;
+  background-color: #060609;
+  color: #FAFAFF;
+}
+.popup .form .password::placeholder {
+  color: #FAFAFF;
 }
 .popup .form .password:focus {
   outline: none;
 }
+.popup .form .show-password {
+  color: white;
+  font-size: 18px;
+}
 .popup .form .phoneNumber {
   padding: 10px;
-  border: 1px solid #DB4437;
+  border: 1px solid #e84078;
   border-radius: 5px;
+  background-color: #060609;
+  color: #FAFAFF;
+}
+.popup .form .phoneNumber::placeholder {
+  color: #FAFAFF;
 }
 .popup .form .phoneNumber:focus {
   outline: none;
 }
 .popup .form .submit {
   padding: 10px;
-  border: 1px solid #DB4437;
+  border: none;
   border-radius: 5px;
-  background-color: #DB4437;
+  background-color: #db1a5b;
   color: white;
 }
 .popup .form .submit:focus {
@@ -325,7 +351,7 @@ body {
 }
 .popup .form .submit:hover {
   cursor: pointer;
-  background-color: #a7291e;
+  background-color: #97123f;
 }
 
 .popup-closed {
@@ -1085,6 +1111,7 @@ body {
 }
 .slack-auth-btn .icon {
   transform: scale(0.45);
+  position: relative;
 }
 
 .stripe-auth-btn {
@@ -1316,4 +1343,7 @@ body {
   color: white;
 }
 
-/*# sourceMappingURL=index.css.map */
+.components-showcase {
+  display: flex;
+  flex-direction: row;
+}

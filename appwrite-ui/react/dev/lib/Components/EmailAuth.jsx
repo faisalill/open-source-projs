@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import {MdEmail} from 'react-icons/md'
+import {AiFillEye,AiFillEyeInvisible} from 'react-icons/ai'
 import { Account } from 'appwrite'
 import { v4 as uuidv4 } from 'uuid'
 import React from 'react'
-const EmailAuth = ({client, successUrl, failureUrl,  Refresh, setRefresh, setLoading}) => {
+const EmailAuth = ({client, successUrl, failureUrl}) => {
   const [showPopup, setshowPopup] = useState(false)
   const account = new Account(client) 
   return (
@@ -14,7 +15,7 @@ const EmailAuth = ({client, successUrl, failureUrl,  Refresh, setRefresh, setLoa
     }}
     ><MdEmail className='icon' /> &nbsp; Sign in with Email
     </button>
-    <EmailPromptPopup successUrl={successUrl} failureUrl={failureUrl} showPopup={showPopup} setshowPopup={setshowPopup} account={account} Refresh={Refresh} setLoading={setLoading} setRefresh={setRefresh} />
+    <EmailPromptPopup successUrl={successUrl} failureUrl={failureUrl} showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
     </>
   )
 }
@@ -22,11 +23,12 @@ const EmailAuth = ({client, successUrl, failureUrl,  Refresh, setRefresh, setLoa
 export default EmailAuth
 
 
-const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failureUrl, Refresh, setRefresh, setLoading}) =>{
+const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failureUrl }) =>{
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [id, setId] = useState('')
   const [changeId, setchangeId] = useState(false)
+  const [showPassword, setshowPassword] = useState(false)
   const [showVerificationPopup, setshowVerificationPopup] = useState(false)
   useEffect(() => {
     setId(uuidv4())
@@ -42,7 +44,8 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
       onClick={(e)=>{
         e.stopPropagation()
       }}
-      >
+      > 
+        
         <label className='label'>Email</label>
         <input className='email' type="email" placeholder="Email" 
         value={email}
@@ -52,13 +55,26 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
         }
         />
         <label className='label'>Password</label>
-        <input className='password' type="password" placeholder="Password" 
+        <div className='password-input-wrapper'>
+        <input className='password' type={showPassword ? "text" : "password"} placeholder="Password" 
         value={password}
         onChange={(e)=>{
           setPassword(e.target.value)
         }
         }
         />
+        {showPassword ? 
+        <AiFillEyeInvisible className='show-password'
+        onClick={()=>{
+         setshowPassword(!showPassword)
+        }}
+       />
+        : <AiFillEye className='show-password'
+         onClick={()=>{
+          setshowPassword(!showPassword)
+         }}
+        />}
+        </div>
         <button className='submit' type="submit"
         onClick={async (e)=>{
           e.preventDefault()
@@ -80,13 +96,13 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
         >Get Verification Link</button>
         </form>
      </div>
-     <VerificationPopup Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading} changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account} />
+     <VerificationPopup successUrl={successUrl} failureUrl={failureUrl} changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account} />
     </>
   )
 }
 
 
-const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account, Refresh, setRefresh, setLoading}) =>{
+const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account, successUrl, failureUrl}) =>{
   const [verificationCode, setverificationCode] = useState('')
   return(
     <>
@@ -118,10 +134,12 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
             setchangeId(!changeId)
             setverificationCode('')
             setshowVerificationPopup(false)
-            setRefresh(!Refresh)
-            setLoading(true)
+            window.location.href = successUrl;
           }
           )
+          promise.catch((err)=>{
+            window.location.href = failureUrl;
+          })
         }}
         >Verify</button>
         </form>

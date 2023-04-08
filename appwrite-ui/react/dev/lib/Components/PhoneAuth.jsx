@@ -3,7 +3,7 @@ import {FaPhoneAlt} from 'react-icons/fa'
 import { Account } from 'appwrite'
 import {v4 as uuidv4} from 'uuid'
 import React from 'react'
-const PhoneAuth = ({client,  Refresh, setRefresh, setLoading}) => {
+const PhoneAuth = ({client,  successUrl, failureUrl}) => {
   const [showPopup, setshowPopup] = useState(false)
   const account = new Account(client)
   return (
@@ -13,7 +13,7 @@ const PhoneAuth = ({client,  Refresh, setRefresh, setLoading}) => {
       setshowPopup(!showPopup)
     }}
     ><FaPhoneAlt className='icon' /> &nbsp; Sign in with Phone</button>
-    <PhonePromptPopup Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading} showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
+    <PhonePromptPopup successUrl={successUrl} failureUrl={failureUrl} showPopup={showPopup} setshowPopup={setshowPopup} account={account} />
     </>
   )
 }
@@ -21,7 +21,7 @@ const PhoneAuth = ({client,  Refresh, setRefresh, setLoading}) => {
 export default PhoneAuth
 
 
-const PhonePromptPopup = ({showPopup, setshowPopup, account,  Refresh, setRefresh, setLoading}) =>{
+const PhonePromptPopup = ({showPopup, setshowPopup, account,successUrl, failureUrl}) =>{
  const [phone, setPhone] = useState('')
   const [id, setId] = useState('')
   const [changeId, setchangeId] = useState(false)
@@ -62,13 +62,13 @@ const PhonePromptPopup = ({showPopup, setshowPopup, account,  Refresh, setRefres
         >Get Verification Code</button>
         </form>
      </div>
-      <VerificationPopup Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading} changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account}  />
+      <VerificationPopup successUrl={successUrl} failureUrl={failureUrl} changeId={changeId} setchangeId={setchangeId} id={id} showVerificationPopup={showVerificationPopup} setshowVerificationPopup={setshowVerificationPopup} account={account}  />
     </>
   )
 }
 
 
-const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account,  Refresh, setRefresh, setLoading}) =>{
+const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, setshowVerificationPopup,account,  successUrl, failureUrl}) =>{
   const [verificationCode, setverificationCode] = useState('')
   return(
     <>
@@ -99,10 +99,12 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
             // console.log(res)
             setchangeId(!changeId)
             setshowVerificationPopup(false)
-            setRefresh(!Refresh)
-            setLoading(true)
+            window.location.href = successUrl;
           }
           )
+          promise.catch((err)=>{
+            window.location.href = failureUrl;
+          })
         }}
         >Verify</button>
         </form>

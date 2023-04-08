@@ -32,7 +32,7 @@ import WordpressAuth from "./WordpressAuth.jsx";
 import YahooAuth from "./YahooAuth.jsx";
 import YandexAuth from "./YandexAuth.jsx";
 import ZoomAuth from "./ZoomAuth.jsx";
-import BitlyAuth from "./BitlyAuth.jsx";
+import BitlyAuth from "./BitlyAuth.jsx";  
 import StripeAuth from "./StripeAuth.jsx";
 import YammerAuth from "./YammerAuth.jsx";
 import React from 'react'
@@ -161,7 +161,7 @@ export {
   GithubAuth,
   EmailAuth,
   MicrosoftAuth,
-  AppleAuth,
+  AppleAuth, 
   PhoneAuth,
   AmazonAuth,
   AuthO,
