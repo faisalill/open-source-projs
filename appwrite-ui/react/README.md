@@ -10,7 +10,7 @@
 1. [Contributing](#contributing)
 
 ## Demo <a name="demo"></a>
-You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwrite-ui-react.vercel.app).
+You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwriteui-react.vercel.app/).
 
 ![](https://appwrite-ui-helper.faisalill.tech/v1/storage/buckets/64317c638e38e15eb728/files/64317cad002428318cdc/view?project=642bd7ca87828dbe6b8b&mode=admin)
 
