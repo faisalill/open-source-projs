@@ -35,7 +35,6 @@ Import the Appwrite Auth Component in your React project along with the css file
 ```js
 import {Client, Account} from 'appwrite';
 import {AppwriteAuthComponent} from 'appwriteui-react';
-import 'appwriteui-react/index.css'
 
 const client = new Client()
 .setEndpoint(...)// Your Appwrite Endpoint
@@ -58,7 +57,6 @@ The output will be a component as shown below, clicking on it will redirect the 
 
 ![](https://appwrite-ui-helper.faisalill.tech/v1/storage/buckets/64317c638e38e15eb728/files/64317cb95835e0f64e36/view?project=642bd7ca87828dbe6b8b&mode=admin)
 
-> Make sure to import the css file as shown above to get the styling of the components.
 
 ### Configuration <a name="configuration"></a>
 You can pass the following props to configure the Appwrite Auth Component:

@@ -5,7 +5,7 @@ import AuthButton from '../Helper/AuthButton.jsx'
 const AppleAuth = ({account, successUrl, failureUrl}) => {
   return (
     // <button className="apple-auth-btn"><AiFillApple className='icon' /> &nbsp; Sign in with Apple</button>
-    <AuthButton account={account} successUrl={successUrl} failureUrl={failureUrl} authProvider='apple' btnClassName='apple-auth-btn' displayText='Sign In with Apple' icon={<AiFillApple className='icon'/> } />
+    <AuthButton account={account} successUrl={successUrl} failureUrl={failureUrl} authProvider='apple' btnClassName='appwriteui-react-apple-auth-btn' displayText='Sign In with Apple' icon={<AiFillApple className='icon'/> } />
     )
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "appwriteui-react",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Pre styled Auth Components to use in a react project with appwrite.",
   "main": "index.js",
   "type": "module",
@@ -23,6 +23,7 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-replace": "^5.0.2",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -52,7 +53,6 @@
     "uuid": "^9.0.0"
   },
   "exports": {
-    ".": "./dist/index.cjs",
-    "./index.css": "./dist/index.css"
+    ".": "./dist/index.cjs"
   }
 }

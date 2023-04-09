@@ -2,7 +2,7 @@ import AuthButton from '../Helper/AuthButton.jsx'
 import React from 'react'
 const SlackAuth = ({account, successUrl, failureUrl}) => {
   return (
-    <AuthButton account={account} authProvider='slack' btnClassName='slack-auth-btn' displayText='Sign in with Slack' successUrl={successUrl} failureUrl={failureUrl} icon={<SlackSvg className='icon'/> }   />
+    <AuthButton account={account} authProvider='slack' btnClassName='appwriteui-react-slack-auth-btn' displayText='Sign in with Slack' successUrl={successUrl} failureUrl={failureUrl} icon={<SlackSvg className='icon'/> }   />
   )
 }
 

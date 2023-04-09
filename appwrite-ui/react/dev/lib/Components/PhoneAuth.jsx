@@ -6,7 +6,7 @@ const PhoneAuth = ({account,  successUrl, failureUrl}) => {
   const [showPopup, setshowPopup] = useState(false)
   return (
     <>
-    <button title='phone-auth-button' className="phone-auth-btn"
+    <button title='phone-auth-button' className="appwriteui-react-phone-auth-btn"
     onClick={()=>{
       setshowPopup(!showPopup)
     }}
@@ -29,25 +29,25 @@ const PhonePromptPopup = ({showPopup, setshowPopup, account,successUrl, failureU
   },[changeId])
   return(
     <>
-    <div className={showPopup ? 'popup' : 'popup-closed'}
+    <div className={showPopup ? 'appwriteui-react-popup' : 'appwriteui-react-popup-closed'}
     onClick={()=>{
       setshowPopup(false)
     }}
     >
-      <form className='form'
+      <form className='appwriteui-react-form'
       onClick={(e)=>{
         e.stopPropagation()
       }}
       >
-        <label className='label'>Phone Number</label>
-        <input title='phone-number-input' className='phoneNumber'  placeholder="Country Code + Phone Number" 
+        <label className='appwriteui-react-label'>Phone Number</label>
+        <input title='phone-number-input' className='appwriteui-react-phoneNumber'  placeholder="Country Code + Phone Number" 
         value={phone}
         onChange={(e)=>{
           setPhone(e.target.value)
         }
         }
         />
-        <button title='phone-number-submit-button' className='submit' type="submit"
+        <button title='phone-number-submit-button' className='appwriteui-react-submit' type="submit"
         onClick={(e)=>{
           e.preventDefault()
           setPhone('')
@@ -70,25 +70,25 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
   const [verificationCode, setverificationCode] = useState('')
   return(
     <>
-    <div className={showVerificationPopup ? 'popup' : 'popup-closed'}
+    <div className={showVerificationPopup ? 'appwriteui-react-popup' : 'appwriteui-react-popup-closed'}
     onClick={()=>{
       // setshowVerificationPopup(false)
     }}
     >
-      <form className='form'
+      <form className='appwriteui-react-form'
       onClick={(e)=>{
         e.stopPropagation()
       }}
       >
-        <label className='label'>Verification Code</label>
-        <input title='verification-input' className='phoneNumber'  placeholder="Enter Verification Code" 
+        <label className='appwriteui-react-label'>Verification Code</label>
+        <input title='verification-input' className='appwriteui-react-phoneNumber'  placeholder="Enter Verification Code" 
         value={verificationCode}
         onChange={(e)=>{
           setverificationCode(e.target.value)
         }
         }
         />
-        <button title='verification-submit-button' className='submit' type="submit"
+        <button title='verification-submit-button' className='appwriteui-react-submit' type="submit"
         onClick={(e)=>{
           e.preventDefault()
           setverificationCode('')

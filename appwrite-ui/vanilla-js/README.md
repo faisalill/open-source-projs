@@ -1,1 +1,1 @@
-Work on this project is not yet started
+Work on this section of the project has not yet started.

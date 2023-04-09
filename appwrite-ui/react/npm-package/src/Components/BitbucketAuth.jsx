@@ -4,7 +4,7 @@ import {FaBitbucket} from 'react-icons/fa'
 
 const BitbucketAuth = ({account, successUrl, failureUrl}) => {
   return (
-    <AuthButton account={account} authProvider='bitbucket' btnClassName='bitbucket-auth-btn' displayText='Sign in with Bitbucket' failureUrl={failureUrl} successUrl={successUrl} icon={<FaBitbucket className='icon' />}  />
+    <AuthButton account={account} authProvider='bitbucket' btnClassName='appwriteui-react-bitbucket-auth-btn' displayText='Sign in with Bitbucket' failureUrl={failureUrl} successUrl={successUrl} icon={<FaBitbucket className='icon' />}  />
   )
 }
 

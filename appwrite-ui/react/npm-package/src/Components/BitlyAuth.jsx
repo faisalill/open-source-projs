@@ -4,7 +4,7 @@ import {SiBitly} from 'react-icons/si'
 
 const BitlyAuth = ({account, successUrl, failureUrl}) => {
   return (
-    <AuthButton account={account} authProvider='bitly' btnClassName='bitly-auth-btn' displayText='Sign in with Bitly' failureUrl={failureUrl} successUrl={successUrl} icon={<SiBitly className='icon' />}  />
+    <AuthButton account={account} authProvider='bitly' btnClassName='appwriteui-react-bitly-auth-btn' displayText='Sign in with Bitly' failureUrl={failureUrl} successUrl={successUrl} icon={<SiBitly className='icon' />}  />
   )
 }
 

@@ -4,7 +4,7 @@ import {SiAutodesk} from 'react-icons/si'
 
 const AutodeskAuth = ({account, successUrl, failureUrl}) => {
   return (
-    <AuthButton account={account} authProvider='autodesk' btnClassName='autodesk-auth-btn' displayText='Sign In with Autodesk' successUrl={successUrl} failureUrl={failureUrl} icon={<SiAutodesk className='icon'/> }   />
+    <AuthButton account={account} authProvider='autodesk' btnClassName='appwriteui-react-autodesk-auth-btn' displayText='Sign In with Autodesk' successUrl={successUrl} failureUrl={failureUrl} icon={<SiAutodesk className='icon'/> }   />
   )
 }
 

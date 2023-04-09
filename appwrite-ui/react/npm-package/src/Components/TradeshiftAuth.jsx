@@ -2,7 +2,7 @@ import AuthButton from '../Helper/AuthButton.jsx'
 import React from 'react'
 const TradeshiftAuth  = ({account, successUrl, failureUrl}) => {
   return (
-    <AuthButton account={account} authProvider='tradeshift' btnClassName='tradeshift-auth-btn' displayText='Sign in with Tradeshift' successUrl={successUrl} failureUrl={failureUrl} icon={<TradeshiftLogo className='icon'/> }   />
+    <AuthButton account={account} authProvider='tradeshift' btnClassName='appwriteui-react-tradeshift-auth-btn' displayText='Sign in with Tradeshift' successUrl={successUrl} failureUrl={failureUrl} icon={<TradeshiftLogo className='icon'/> }   />
   )
 }
 

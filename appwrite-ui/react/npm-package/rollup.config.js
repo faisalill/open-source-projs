@@ -26,7 +26,7 @@ export default {
     babel({ extensions, babelHelpers: 'bundled' }),
     commonjs(),
     postcss({
-      extract: true,
+      extract: false,
       plugins: [
         autoprefixer(),
         cssnano({

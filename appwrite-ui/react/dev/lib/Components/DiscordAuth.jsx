@@ -10,7 +10,7 @@ const DiscordAuth = ({account , successUrl, failureUrl}) => {
     //     }
     // }
     // ><FaDiscord className='icon' /> &nbsp; Sign in with Discord</button>
-    <AuthButton account={account} btnClassName='discord-auth-btn' authProvider='discord' successUrl={successUrl} failureUrl={failureUrl} icon={<FaDiscord className='icon' />} displayText='Sign in with Discord' />
+    <AuthButton account={account} btnClassName='appwriteui-react-discord-auth-btn' authProvider='discord' successUrl={successUrl} failureUrl={failureUrl} icon={<FaDiscord className='icon' />} displayText='Sign in with Discord' />
     )
 }
 

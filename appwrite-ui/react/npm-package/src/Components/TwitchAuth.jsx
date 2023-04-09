@@ -10,7 +10,7 @@ const TwitchAuth = ({account, successUrl, failureUrl}) => {
     //     }
     // }
     // ><FaTwitch className='icon' /> &nbsp; Sign in with Twitch</button>
-    <AuthButton account={account} btnClassName='twitch-auth-btn' authProvider='twitch' successUrl={successUrl} failureUrl={failureUrl} icon={<FaTwitch className='icon' />} displayText='Sign in with Twitch' />
+    <AuthButton account={account} btnClassName='appwriteui-react-twitch-auth-btn' authProvider='twitch' successUrl={successUrl} failureUrl={failureUrl} icon={<FaTwitch className='icon' />} displayText='Sign in with Twitch' />
     )
 }
 

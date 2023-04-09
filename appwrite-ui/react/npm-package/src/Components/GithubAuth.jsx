@@ -8,7 +8,7 @@ const GithubAuth = ({account, successUrl, failureUrl}) => {
     //   account.createOAuth2Session('github', successUrl, failureUrl)
     // }}
     // ><VscGithub className='icon' /> &nbsp; Sign in with Github</button>
-    <AuthButton account={account} btnClassName='github-auth-btn' authProvider='github' successUrl={successUrl} failureUrl={failureUrl} icon={<VscGithub className='icon' />} displayText='Sign in with Github' />
+    <AuthButton account={account} btnClassName='appwriteui-react-github-auth-btn' authProvider='github' successUrl={successUrl} failureUrl={failureUrl} icon={<VscGithub className='icon' />} displayText='Sign in with Github' />
   )
 }
 

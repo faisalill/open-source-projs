@@ -78,17 +78,6 @@ $bitly-auth-btn-text-color: #fff;
 
 
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  place-items: center;
-}
 
 @mixin flex-center {
   display: flex;
@@ -120,7 +109,7 @@ body{
 }
 
 
-.google-auth-btn{
+.appwriteui-react-google-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $google-auth-btn-bg;
@@ -132,7 +121,7 @@ body{
   
 }
 
-.facebook-auth-btn{
+.appwriteui-react-facebook-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $facebook-auth-btn-bg;
@@ -145,7 +134,7 @@ body{
   }
 }
 
-.twitter-auth-btn{
+.appwriteui-react-twitter-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $twitter-auth-btn-bg;
@@ -158,7 +147,7 @@ body{
   }
 }
 
-.github-auth-btn{
+.appwriteui-react-github-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $github-auth-btn-bg;
@@ -171,7 +160,7 @@ body{
   }
 }
 
-.email-auth-btn{
+.appwriteui-react-email-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $email-auth-btn-bg;
@@ -184,7 +173,7 @@ body{
   }
 }
 
-.microsoft-auth-btn{
+.appwriteui-react-microsoft-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $microsoft-auth-btn-bg;
@@ -197,7 +186,7 @@ body{
   }
 }
 
-.apple-auth-btn{
+.appwriteui-react-apple-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $apple-auth-btn-bg;
@@ -210,7 +199,7 @@ body{
   }
 }
 
-.phone-auth-btn{
+.appwriteui-react-phone-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $phone-auth-btn-bg;
@@ -223,7 +212,7 @@ body{
   }
 }
 
-.popup{
+.appwriteui-react-popup{
   $bg: #1B1B27;
   $text-color: #FAFAFF;
   $button-bg:#db1a5b;
@@ -238,7 +227,7 @@ body{
   place-items: center;
   background-color: rgba(0, 0, 0, 0.7);
   font-family:  'Inter', "arial", sans-serif;
-  .form{
+  .appwriteui-react-form{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -246,12 +235,12 @@ body{
     border-radius: 5px;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     background-color:  $bg;
-    .label{
+    .appwriteui-react-label{
       font-size: 20px;
       color: $text-color; 
       font-weight: 700;
     }
-    .email{
+    .appwriteui-react-email{
       padding: 10px;
       border: 1px solid lighten($button-bg, 10%);
       border-radius: 5px;
@@ -264,12 +253,12 @@ body{
         outline: none;
       }
     }
-    .password-input-wrapper{
+    .appwriteui-react-password-input-wrapper{
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    .password{
+    .appwriteui-react-password{
       padding: 10px;
       border: 1px solid lighten($button-bg, 10%);
       border-radius: 5px;
@@ -283,12 +272,12 @@ body{
       }
     }
        
-     .show-password{
+     .appwriteui-react-show-password{
       color: white;
       font-size: 18px;
      }   
      
-     .phoneNumber{
+     .appwriteui-react-phoneNumber{
       padding: 10px;
       border: 1px solid lighten($button-bg, 10%);
       border-radius: 5px;
@@ -302,7 +291,7 @@ body{
       }
     }
 
-    .submit{
+    .appwriteui-react-submit{
       padding: 10px;
       // border: 1px solid $email-auth-btn-bg;
       border: none;
@@ -320,12 +309,12 @@ body{
 
   }
 }
-.popup-closed{
+.appwriteui-react-popup-closed{
   display: none;
 }
 
 
-.amazon-auth-btn{
+.appwriteui-react-amazon-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $amazon-auth-btn-bg;
@@ -338,7 +327,7 @@ body{
   }
 }
 
-.auth0-auth-btn{
+.appwriteui-react-auth0-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $auth0-auth-btn-bg;
@@ -351,7 +340,7 @@ body{
   }
 }
 
-.discord-auth-btn{
+.appwriteui-react-discord-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $discord-auth-btn-bg;
@@ -364,7 +353,7 @@ body{
   }
 }
 
-.spotify-auth-btn{
+.appwriteui-react-spotify-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $spotify-auth-btn-bg;
@@ -377,7 +366,7 @@ body{
   }
 }
 
-.twitch-auth-btn{
+.appwriteui-react-twitch-auth-btn{
   @include flex-center;
   @include auth-btn;
   background: $twitch-auth-btn-bg;
@@ -390,28 +379,10 @@ body{
   }
 }
 
-.loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid $appwrite-purple;
-  border-bottom-color: $appwrite-purple-light;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-  }
-
-  @keyframes rotation {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-  } 
 
 
-  .info-div{
+
+  .appwriteui-react-info-div{
     display: grid;
     place-items: center;
     border: 2px solid $appwrite-purple;
@@ -427,7 +398,7 @@ body{
     }
   }
 
-  .sign-out-btn{
+  .appwriteui-react-sign-out-btn{
     padding: 10px;
     border: 2px solid $appwrite-purple;
     border-radius: 5px;
@@ -440,7 +411,7 @@ body{
     }
   }
 
-  .autodesk-auth-btn{
+  .appwriteui-react-autodesk-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $autodesk-auth-btn-bg;
@@ -453,7 +424,7 @@ body{
     }
   }
 
-  .authentik-auth-btn{
+  .appwriteui-react-authentik-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $authentik-auth-btn-bg;
@@ -469,7 +440,7 @@ body{
     }
   }
 
-  .bitbucket-auth-btn{
+  .appwriteui-react-bitbucket-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $bitbucket-auth-btn-bg;
@@ -482,7 +453,7 @@ body{
     }
   }
 
-  .bitly-auth-btn{
+  .appwriteui-react-bitly-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $bitly-auth-btn-bg;
@@ -495,7 +466,7 @@ body{
     }
   }
 
-  .box-auth-btn{
+  .appwriteui-react-box-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $box-auth-btn-bg;
@@ -508,7 +479,7 @@ body{
     }
   }
 
-  .dailymotion-auth-btn{
+  .appwriteui-react-dailymotion-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $dailymotion-auth-btn-bg;
@@ -521,7 +492,7 @@ body{
     }
   }
 
-  .disqus-auth-btn{
+  .appwriteui-react-disqus-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $disqus-auth-btn-bg;
@@ -534,7 +505,7 @@ body{
     }
   }
 
-  .dropbox-auth-btn{
+  .appwriteui-react-dropbox-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $dropbox-auth-btn-bg;
@@ -547,7 +518,7 @@ body{
     }
   }
   
-  .etsy-auth-btn{
+  .appwriteui-react-etsy-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $etsy-auth-btn-bg;
@@ -560,7 +531,7 @@ body{
     }
   }
 
-  .gitlab-auth-btn{
+  .appwriteui-react-gitlab-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $gitlab-auth-btn-bg;
@@ -573,7 +544,7 @@ body{
     }
   }
 
-  .linkedin-auth-btn{
+  .appwriteui-react-linkedin-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $linkedin-auth-btn-bg;
@@ -586,7 +557,7 @@ body{
     }
   }
 
-  .notion-auth-btn{
+  .appwriteui-react-notion-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $notion-auth-btn-bg;
@@ -599,7 +570,7 @@ body{
     }
   }
 
-  .okta-auth-btn{
+  .appwriteui-react-okta-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $okta-auth-btn-bg;
@@ -612,7 +583,7 @@ body{
     }
   }
 
-  .paypal-auth-btn{
+  .appwriteui-react-paypal-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $paypal-auth-btn-bg;
@@ -625,7 +596,7 @@ body{
     }
   }
 
-  .podio-auth-btn{
+  .appwriteui-react-podio-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $podio-auth-btn-bg;
@@ -633,13 +604,13 @@ body{
     &:hover {
       background: darken($podio-auth-btn-bg, 15%);
     }
-    .icon{
+    .appwriteui-react-icon{
       height: 30px; 
       width: 30px;
     }
   }
 
-  .salesforce-auth-btn{
+  .appwriteui-react-salesforce-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $salesforce-auth-btn-bg;
@@ -652,7 +623,7 @@ body{
     }
   }
 
-  .slack-auth-btn{
+  .appwriteui-react-slack-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $slack-auth-btn-bg;
@@ -666,7 +637,7 @@ body{
     }
   }
 
-  .stripe-auth-btn{
+  .appwriteui-react-stripe-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $stripe-auth-btn-bg;
@@ -679,7 +650,7 @@ body{
     }
   }
 
-  .tradeshift-auth-btn{
+  .appwriteui-react-tradeshift-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $tradeshift-auth-btn-bg;
@@ -698,7 +669,7 @@ body{
     }
   }
 
-  .wordpress-auth-btn{
+  .appwriteui-react-wordpress-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $wordpress-auth-btn-bg;
@@ -711,7 +682,7 @@ body{
     }
   }
 
-  .yahoo-auth-btn{
+  .appwriteui-react-yahoo-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $yahoo-auth-btn-bg;
@@ -724,7 +695,7 @@ body{
     }
   }
 
-  .yammer-auth-btn{
+  .appwriteui-react-yammer-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $yammer-auth-btn-bg;
@@ -739,7 +710,7 @@ body{
   }
 
 
-  .yandex-auth-btn{
+  .appwriteui-react-yandex-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $yandex-auth-btn-bg;
@@ -752,7 +723,7 @@ body{
     }
   }
 
-  .zoom-auth-btn{
+  .appwriteui-react-zoom-auth-btn{
     @include flex-center;
     @include auth-btn;
     background: $zoom-auth-btn-bg;
@@ -763,9 +734,4 @@ body{
     .icon{
       color: white;
     }
-  }
-
-  .components-showcase{
-    display: flex;
-    flex-direction: row;
   }

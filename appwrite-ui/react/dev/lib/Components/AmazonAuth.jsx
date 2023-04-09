@@ -10,7 +10,7 @@ const AmazonAuth = ({account, successUrl, failureUrl}) => {
     //     }
     // }
     // ><FaAmazon className='icon' /> &nbsp; Sign in with Amazon</button>
-    <AuthButton  account={account} btnClassName='amazon-auth-btn' authProvider='amazon' successUrl={successUrl} failureUrl={failureUrl} icon={<FaAmazon className='icon' />} displayText='Sign in with Amazon' />
+    <AuthButton  account={account} btnClassName='appwriteui-react-amazon-auth-btn' authProvider='amazon' successUrl={successUrl} failureUrl={failureUrl} icon={<FaAmazon className='icon' />} displayText='Sign in with Amazon' />
   )
 }
 

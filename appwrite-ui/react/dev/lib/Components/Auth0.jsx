@@ -10,7 +10,7 @@ const Auth0 = ({account, successUrl, failureUrl}) => {
     //     }
     // }
     // ><SiAuth0 className='icon' /> &nbsp; Sign in with Auth0</button>
-    <AuthButton account={account} btnClassName='auth0-auth-btn' authProvider='auth0' successUrl={successUrl} failureUrl={failureUrl} icon={<SiAuth0 className='icon' />} displayText='Sign in with Auth0' />
+    <AuthButton account={account} btnClassName='appwriteui-react-auth0-auth-btn' authProvider='auth0' successUrl={successUrl} failureUrl={failureUrl} icon={<SiAuth0 className='icon' />} displayText='Sign in with Auth0' />
     )
 }
 

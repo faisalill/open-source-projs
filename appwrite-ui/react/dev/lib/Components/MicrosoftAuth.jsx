@@ -8,7 +8,7 @@ const MicrosoftAuth = ({account, successUrl, failureUrl}) => {
     // }}
     // aria-label='Sign in with Microsoft'
     // ><MicrosoftSvg className='icon' /> &nbsp; Sign in with Microsoft</button>
-    <AuthButton account={account} btnClassName='microsoft-auth-btn' authProvider='microsoft' successUrl={successUrl} failureUrl={failureUrl} icon={<MicrosoftSvg className='icon' />} displayText='Sign in with Microsoft' />
+    <AuthButton account={account} btnClassName='appwriteui-react-microsoft-auth-btn' authProvider='microsoft' successUrl={successUrl} failureUrl={failureUrl} icon={<MicrosoftSvg className='icon' />} displayText='Sign in with Microsoft' />
     )
 }
 

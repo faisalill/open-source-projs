@@ -7,7 +7,7 @@ const EmailAuth = ({account, successUrl, failureUrl}) => {
   const [showPopup, setshowPopup] = useState(false)
   return (
     <>
-    <button className="email-auth-btn"
+    <button className="appwriteui-react-email-auth-btn"
     onClick={()=>{
       setshowPopup(!showPopup)
     }}
@@ -33,28 +33,28 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
   },[changeId])
   return(
     <>
-    <div className={showPopup ? 'popup' : 'popup-closed'}
+    <div className={showPopup ? 'appwriteui-react-popup' : 'appwriteui-react-popup-closed'}
     onClick={()=>{
       setshowPopup(false)
     }}
     >
-      <form className='form'
+      <form className='appwriteui-react-form'
       onClick={(e)=>{
         e.stopPropagation()
       }}
       > 
         
-        <label className='label'>Email</label>
-        <input title='email-input' className='email' type="email" placeholder="Email" 
+        <label className='appwriteui-react-label'>Email</label>
+        <input title='email-input' className='appwriteui-react-email' type="email" placeholder="Email" 
         value={email}
         onChange={(e)=>{
           setEmail(e.target.value)
         }
         }
         />
-        <label className='label'>Password</label>
-        <div className='password-input-wrapper'>
-        <input title='password-input' className='password' type={showPassword ? "text" : "password"} placeholder="Password" 
+        <label className='appwriteui-react-label'>Password</label>
+        <div className='appwriteui-react-password-input-wrapper'>
+        <input title='password-input' className='appwriteui-react-password' type={showPassword ? "text" : "password"} placeholder="Password" 
         value={password}
         onChange={(e)=>{
           setPassword(e.target.value)
@@ -62,18 +62,18 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
         }
         />
         {showPassword ? 
-        <AiFillEyeInvisible title='show-hide-password-button' className='show-password'
+        <AiFillEyeInvisible title='show-hide-password-button' className='appwriteui-react-show-password'
         onClick={()=>{
          setshowPassword(!showPassword)
         }}
        />
-        : <AiFillEye title='show-hide-password-button' className='show-password'
+        : <AiFillEye title='show-hide-password-button' className='appwriteui-react-show-password'
          onClick={()=>{
           setshowPassword(!showPassword)
          }}
         />}
         </div>
-        <button title='pre-verification-submit-button' className='submit' type="submit"
+        <button title='pre-verification-submit-button' className='appwriteui-react-submit' type="submit"
         onClick={async (e)=>{
           e.preventDefault()
           setshowPopup(false)
@@ -104,25 +104,25 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
   const [verificationCode, setverificationCode] = useState('')
   return(
     <>
-    <div className={showVerificationPopup ? 'popup' : 'popup-closed'}
+    <div className={showVerificationPopup ? 'appwriteui-react-popup' : 'appwriteui-react-popup-closed'}
     onClick={()=>{
       // setshowVerificationPopup(false)
     }}
     >
-      <form className='form'
+      <form className='appwriteui-react-form'
       onClick={(e)=>{
         e.stopPropagation()
       }}
       >
-        <label className='label'>Verification Link (check your spam inbox too)</label>
-        <input title='verification-link-input' className='phoneNumber'  placeholder="Paste Verification Link " 
+        <label className='appwriteui-react-label'>Verification Link (check your spam inbox too)</label>
+        <input title='verification-link-input' className='appwriteui-react-phoneNumber'  placeholder="Paste Verification Link " 
         value={verificationCode}
         onChange={(e)=>{
           setverificationCode(e.target.value)
         }
         }
         />
-        <button title='verification-link-submit-button' className='submit' type="submit"
+        <button title='verification-link-submit-button' className='appwriteui-react-submit' type="submit"
         onClick={(e)=>{
           e.preventDefault()
           setshowVerificationPopup(false)

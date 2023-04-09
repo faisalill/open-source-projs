@@ -1,16 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  place-items: center;
-}
-
-.google-auth-btn {
+.appwriteui-react-google-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,21 +14,21 @@ body {
   background: #fff;
   color: #7A7A7A;
 }
-.google-auth-btn:hover {
+.appwriteui-react-google-auth-btn:hover {
   cursor: pointer;
 }
-.google-auth-btn:focus {
+.appwriteui-react-google-auth-btn:focus {
   outline: none;
 }
-.google-auth-btn .icon {
+.appwriteui-react-google-auth-btn .icon {
   font-size: 24px;
 }
-.google-auth-btn:hover {
+.appwriteui-react-google-auth-btn:hover {
   background: #d9d9d9;
   border-color: #d9d9d9;
 }
 
-.facebook-auth-btn {
+.appwriteui-react-facebook-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,23 +44,23 @@ body {
   background: #3B5998;
   color: #fff;
 }
-.facebook-auth-btn:hover {
+.appwriteui-react-facebook-auth-btn:hover {
   cursor: pointer;
 }
-.facebook-auth-btn:focus {
+.appwriteui-react-facebook-auth-btn:focus {
   outline: none;
 }
-.facebook-auth-btn .icon {
+.appwriteui-react-facebook-auth-btn .icon {
   font-size: 24px;
 }
-.facebook-auth-btn:hover {
+.appwriteui-react-facebook-auth-btn:hover {
   background: #263961;
 }
-.facebook-auth-btn .icon {
+.appwriteui-react-facebook-auth-btn .icon {
   color: white;
 }
 
-.twitter-auth-btn {
+.appwriteui-react-twitter-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,23 +76,23 @@ body {
   background: #55ACEE;
   color: #fff;
 }
-.twitter-auth-btn:hover {
+.appwriteui-react-twitter-auth-btn:hover {
   cursor: pointer;
 }
-.twitter-auth-btn:focus {
+.appwriteui-react-twitter-auth-btn:focus {
   outline: none;
 }
-.twitter-auth-btn .icon {
+.appwriteui-react-twitter-auth-btn .icon {
   font-size: 24px;
 }
-.twitter-auth-btn:hover {
+.appwriteui-react-twitter-auth-btn:hover {
   background: #1689e0;
 }
-.twitter-auth-btn .icon {
+.appwriteui-react-twitter-auth-btn .icon {
   color: white;
 }
 
-.github-auth-btn {
+.appwriteui-react-github-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,23 +108,23 @@ body {
   background: #333333;
   color: #fff;
 }
-.github-auth-btn:hover {
+.appwriteui-react-github-auth-btn:hover {
   cursor: pointer;
 }
-.github-auth-btn:focus {
+.appwriteui-react-github-auth-btn:focus {
   outline: none;
 }
-.github-auth-btn .icon {
+.appwriteui-react-github-auth-btn .icon {
   font-size: 24px;
 }
-.github-auth-btn:hover {
+.appwriteui-react-github-auth-btn:hover {
   background: #0d0d0d;
 }
-.github-auth-btn .icon {
+.appwriteui-react-github-auth-btn .icon {
   color: white;
 }
 
-.email-auth-btn {
+.appwriteui-react-email-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,23 +140,23 @@ body {
   background: #DB4437;
   color: #fff;
 }
-.email-auth-btn:hover {
+.appwriteui-react-email-auth-btn:hover {
   cursor: pointer;
 }
-.email-auth-btn:focus {
+.appwriteui-react-email-auth-btn:focus {
   outline: none;
 }
-.email-auth-btn .icon {
+.appwriteui-react-email-auth-btn .icon {
   font-size: 24px;
 }
-.email-auth-btn:hover {
+.appwriteui-react-email-auth-btn:hover {
   background: #a7291e;
 }
-.email-auth-btn .icon {
+.appwriteui-react-email-auth-btn .icon {
   color: white;
 }
 
-.microsoft-auth-btn {
+.appwriteui-react-microsoft-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,23 +172,23 @@ body {
   background: #2F2F2F;
   color: #fff;
 }
-.microsoft-auth-btn:hover {
+.appwriteui-react-microsoft-auth-btn:hover {
   cursor: pointer;
 }
-.microsoft-auth-btn:focus {
+.appwriteui-react-microsoft-auth-btn:focus {
   outline: none;
 }
-.microsoft-auth-btn .icon {
+.appwriteui-react-microsoft-auth-btn .icon {
   font-size: 24px;
 }
-.microsoft-auth-btn:hover {
+.appwriteui-react-microsoft-auth-btn:hover {
   background: #090909;
 }
-.microsoft-auth-btn .icon {
+.appwriteui-react-microsoft-auth-btn .icon {
   color: white;
 }
 
-.apple-auth-btn {
+.appwriteui-react-apple-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,23 +204,23 @@ body {
   background: #000000;
   color: #fff;
 }
-.apple-auth-btn:hover {
+.appwriteui-react-apple-auth-btn:hover {
   cursor: pointer;
 }
-.apple-auth-btn:focus {
+.appwriteui-react-apple-auth-btn:focus {
   outline: none;
 }
-.apple-auth-btn .icon {
+.appwriteui-react-apple-auth-btn .icon {
   font-size: 24px;
 }
-.apple-auth-btn:hover {
+.appwriteui-react-apple-auth-btn:hover {
   background: black;
 }
-.apple-auth-btn .icon {
+.appwriteui-react-apple-auth-btn .icon {
   color: white;
 }
 
-.phone-auth-btn {
+.appwriteui-react-phone-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,23 +236,23 @@ body {
   background: #02a46d;
   color: #fff;
 }
-.phone-auth-btn:hover {
+.appwriteui-react-phone-auth-btn:hover {
   cursor: pointer;
 }
-.phone-auth-btn:focus {
+.appwriteui-react-phone-auth-btn:focus {
   outline: none;
 }
-.phone-auth-btn .icon {
+.appwriteui-react-phone-auth-btn .icon {
   font-size: 24px;
 }
-.phone-auth-btn:hover {
+.appwriteui-react-phone-auth-btn:hover {
   background: #01583b;
 }
-.phone-auth-btn .icon {
+.appwriteui-react-phone-auth-btn .icon {
   color: white;
 }
 
-.popup {
+.appwriteui-react-popup {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -277,7 +265,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   font-family: "Inter", "arial", sans-serif;
 }
-.popup .form {
+.appwriteui-react-popup .appwriteui-react-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -286,79 +274,79 @@ body {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
   background-color: #1B1B27;
 }
-.popup .form .label {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-label {
   font-size: 20px;
   color: #FAFAFF;
   font-weight: 700;
 }
-.popup .form .email {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-email {
   padding: 10px;
   border: 1px solid #e84078;
   border-radius: 5px;
   background-color: #060609;
   color: #FAFAFF;
 }
-.popup .form .email::placeholder {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-email::placeholder {
   color: #FAFAFF;
 }
-.popup .form .email:focus {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-email:focus {
   outline: none;
 }
-.popup .form .password-input-wrapper {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-password-input-wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.popup .form .password {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-password {
   padding: 10px;
   border: 1px solid #e84078;
   border-radius: 5px;
   background-color: #060609;
   color: #FAFAFF;
 }
-.popup .form .password::placeholder {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-password::placeholder {
   color: #FAFAFF;
 }
-.popup .form .password:focus {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-password:focus {
   outline: none;
 }
-.popup .form .show-password {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-show-password {
   color: white;
   font-size: 18px;
 }
-.popup .form .phoneNumber {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-phoneNumber {
   padding: 10px;
   border: 1px solid #e84078;
   border-radius: 5px;
   background-color: #060609;
   color: #FAFAFF;
 }
-.popup .form .phoneNumber::placeholder {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-phoneNumber::placeholder {
   color: #FAFAFF;
 }
-.popup .form .phoneNumber:focus {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-phoneNumber:focus {
   outline: none;
 }
-.popup .form .submit {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-submit {
   padding: 10px;
   border: none;
   border-radius: 5px;
   background-color: #db1a5b;
   color: white;
 }
-.popup .form .submit:focus {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-submit:focus {
   outline: none;
 }
-.popup .form .submit:hover {
+.appwriteui-react-popup .appwriteui-react-form .appwriteui-react-submit:hover {
   cursor: pointer;
   background-color: #97123f;
 }
 
-.popup-closed {
+.appwriteui-react-popup-closed {
   display: none;
 }
 
-.amazon-auth-btn {
+.appwriteui-react-amazon-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,23 +362,23 @@ body {
   background: #FF9900;
   color: #fff;
 }
-.amazon-auth-btn:hover {
+.appwriteui-react-amazon-auth-btn:hover {
   cursor: pointer;
 }
-.amazon-auth-btn:focus {
+.appwriteui-react-amazon-auth-btn:focus {
   outline: none;
 }
-.amazon-auth-btn .icon {
+.appwriteui-react-amazon-auth-btn .icon {
   font-size: 24px;
 }
-.amazon-auth-btn:hover {
+.appwriteui-react-amazon-auth-btn:hover {
   background: #b36b00;
 }
-.amazon-auth-btn .icon {
+.appwriteui-react-amazon-auth-btn .icon {
   color: white;
 }
 
-.auth0-auth-btn {
+.appwriteui-react-auth0-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,23 +394,23 @@ body {
   background: #EA5424;
   color: #fff;
 }
-.auth0-auth-btn:hover {
+.appwriteui-react-auth0-auth-btn:hover {
   cursor: pointer;
 }
-.auth0-auth-btn:focus {
+.appwriteui-react-auth0-auth-btn:focus {
   outline: none;
 }
-.auth0-auth-btn .icon {
+.appwriteui-react-auth0-auth-btn .icon {
   font-size: 24px;
 }
-.auth0-auth-btn:hover {
+.appwriteui-react-auth0-auth-btn:hover {
   background: #b13811;
 }
-.auth0-auth-btn .icon {
+.appwriteui-react-auth0-auth-btn .icon {
   color: white;
 }
 
-.discord-auth-btn {
+.appwriteui-react-discord-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -438,23 +426,23 @@ body {
   background: #5865F2;
   color: #fff;
 }
-.discord-auth-btn:hover {
+.appwriteui-react-discord-auth-btn:hover {
   cursor: pointer;
 }
-.discord-auth-btn:focus {
+.appwriteui-react-discord-auth-btn:focus {
   outline: none;
 }
-.discord-auth-btn .icon {
+.appwriteui-react-discord-auth-btn .icon {
   font-size: 24px;
 }
-.discord-auth-btn:hover {
+.appwriteui-react-discord-auth-btn:hover {
   background: #707bf4;
 }
-.discord-auth-btn .icon {
+.appwriteui-react-discord-auth-btn .icon {
   color: white;
 }
 
-.spotify-auth-btn {
+.appwriteui-react-spotify-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -470,23 +458,23 @@ body {
   background: #1DD05E;
   color: #fff;
 }
-.spotify-auth-btn:hover {
+.appwriteui-react-spotify-auth-btn:hover {
   cursor: pointer;
 }
-.spotify-auth-btn:focus {
+.appwriteui-react-spotify-auth-btn:focus {
   outline: none;
 }
-.spotify-auth-btn .icon {
+.appwriteui-react-spotify-auth-btn .icon {
   font-size: 24px;
 }
-.spotify-auth-btn:hover {
+.appwriteui-react-spotify-auth-btn:hover {
   background: #148d40;
 }
-.spotify-auth-btn .icon {
+.appwriteui-react-spotify-auth-btn .icon {
   color: white;
 }
 
-.twitch-auth-btn {
+.appwriteui-react-twitch-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -502,42 +490,23 @@ body {
   background: #9146FF;
   color: #fff;
 }
-.twitch-auth-btn:hover {
+.appwriteui-react-twitch-auth-btn:hover {
   cursor: pointer;
 }
-.twitch-auth-btn:focus {
+.appwriteui-react-twitch-auth-btn:focus {
   outline: none;
 }
-.twitch-auth-btn .icon {
+.appwriteui-react-twitch-auth-btn .icon {
   font-size: 24px;
 }
-.twitch-auth-btn:hover {
+.appwriteui-react-twitch-auth-btn:hover {
   background: #a060ff;
 }
-.twitch-auth-btn .icon {
+.appwriteui-react-twitch-auth-btn .icon {
   color: white;
 }
 
-.loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid #F02E65;
-  border-bottom-color: #702340;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.info-div {
+.appwriteui-react-info-div {
   display: grid;
   place-items: center;
   border: 2px solid #F02E65;
@@ -545,15 +514,15 @@ body {
   border-radius: 5px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.info-div p {
+.appwriteui-react-info-div p {
   font-size: 17px;
   color: #5865F2;
 }
-.info-div .info {
+.appwriteui-react-info-div .info {
   color: #F02E65;
 }
 
-.sign-out-btn {
+.appwriteui-react-sign-out-btn {
   padding: 10px;
   border: 2px solid #F02E65;
   border-radius: 5px;
@@ -561,12 +530,12 @@ body {
   margin: 10px;
   color: white;
 }
-.sign-out-btn:hover {
+.appwriteui-react-sign-out-btn:hover {
   cursor: pointer;
   background-color: #c30e41;
 }
 
-.autodesk-auth-btn {
+.appwriteui-react-autodesk-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -582,23 +551,23 @@ body {
   background: #000000;
   color: #fff;
 }
-.autodesk-auth-btn:hover {
+.appwriteui-react-autodesk-auth-btn:hover {
   cursor: pointer;
 }
-.autodesk-auth-btn:focus {
+.appwriteui-react-autodesk-auth-btn:focus {
   outline: none;
 }
-.autodesk-auth-btn .icon {
+.appwriteui-react-autodesk-auth-btn .icon {
   font-size: 24px;
 }
-.autodesk-auth-btn:hover {
+.appwriteui-react-autodesk-auth-btn:hover {
   background: black;
 }
-.autodesk-auth-btn .icon {
+.appwriteui-react-autodesk-auth-btn .icon {
   color: white;
 }
 
-.authentik-auth-btn {
+.appwriteui-react-authentik-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -614,25 +583,25 @@ body {
   background: #fff;
   color: #F5492C;
 }
-.authentik-auth-btn:hover {
+.appwriteui-react-authentik-auth-btn:hover {
   cursor: pointer;
 }
-.authentik-auth-btn:focus {
+.appwriteui-react-authentik-auth-btn:focus {
   outline: none;
 }
-.authentik-auth-btn .icon {
+.appwriteui-react-authentik-auth-btn .icon {
   font-size: 24px;
 }
-.authentik-auth-btn:hover {
+.appwriteui-react-authentik-auth-btn:hover {
   background: #d9d9d9;
 }
-.authentik-auth-btn .icon {
+.appwriteui-react-authentik-auth-btn .icon {
   height: 40px;
   width: 40px;
   color: white;
 }
 
-.bitbucket-auth-btn {
+.appwriteui-react-bitbucket-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -648,23 +617,23 @@ body {
   background: #2684FF;
   color: #fff;
 }
-.bitbucket-auth-btn:hover {
+.appwriteui-react-bitbucket-auth-btn:hover {
   cursor: pointer;
 }
-.bitbucket-auth-btn:focus {
+.appwriteui-react-bitbucket-auth-btn:focus {
   outline: none;
 }
-.bitbucket-auth-btn .icon {
+.appwriteui-react-bitbucket-auth-btn .icon {
   font-size: 24px;
 }
-.bitbucket-auth-btn:hover {
+.appwriteui-react-bitbucket-auth-btn:hover {
   background: #005ed9;
 }
-.bitbucket-auth-btn .icon {
+.appwriteui-react-bitbucket-auth-btn .icon {
   color: white;
 }
 
-.bitly-auth-btn {
+.appwriteui-react-bitly-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -680,23 +649,23 @@ body {
   background: #E74C1C;
   color: #fff;
 }
-.bitly-auth-btn:hover {
+.appwriteui-react-bitly-auth-btn:hover {
   cursor: pointer;
 }
-.bitly-auth-btn:focus {
+.appwriteui-react-bitly-auth-btn:focus {
   outline: none;
 }
-.bitly-auth-btn .icon {
+.appwriteui-react-bitly-auth-btn .icon {
   font-size: 24px;
 }
-.bitly-auth-btn:hover {
+.appwriteui-react-bitly-auth-btn:hover {
   background: #a53411;
 }
-.bitly-auth-btn .icon {
+.appwriteui-react-bitly-auth-btn .icon {
   color: white;
 }
 
-.box-auth-btn {
+.appwriteui-react-box-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -712,23 +681,23 @@ body {
   background: #0061D5;
   color: #fff;
 }
-.box-auth-btn:hover {
+.appwriteui-react-box-auth-btn:hover {
   cursor: pointer;
 }
-.box-auth-btn:focus {
+.appwriteui-react-box-auth-btn:focus {
   outline: none;
 }
-.box-auth-btn .icon {
+.appwriteui-react-box-auth-btn .icon {
   font-size: 24px;
 }
-.box-auth-btn:hover {
+.appwriteui-react-box-auth-btn:hover {
   background: #003e89;
 }
-.box-auth-btn .icon {
+.appwriteui-react-box-auth-btn .icon {
   color: white;
 }
 
-.dailymotion-auth-btn {
+.appwriteui-react-dailymotion-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -744,23 +713,23 @@ body {
   background: #000000;
   color: #fff;
 }
-.dailymotion-auth-btn:hover {
+.appwriteui-react-dailymotion-auth-btn:hover {
   cursor: pointer;
 }
-.dailymotion-auth-btn:focus {
+.appwriteui-react-dailymotion-auth-btn:focus {
   outline: none;
 }
-.dailymotion-auth-btn .icon {
+.appwriteui-react-dailymotion-auth-btn .icon {
   font-size: 24px;
 }
-.dailymotion-auth-btn:hover {
+.appwriteui-react-dailymotion-auth-btn:hover {
   background: black;
 }
-.dailymotion-auth-btn .icon {
+.appwriteui-react-dailymotion-auth-btn .icon {
   color: white;
 }
 
-.disqus-auth-btn {
+.appwriteui-react-disqus-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -776,23 +745,23 @@ body {
   background: #2AA0FF;
   color: #fff;
 }
-.disqus-auth-btn:hover {
+.appwriteui-react-disqus-auth-btn:hover {
   cursor: pointer;
 }
-.disqus-auth-btn:focus {
+.appwriteui-react-disqus-auth-btn:focus {
   outline: none;
 }
-.disqus-auth-btn .icon {
+.appwriteui-react-disqus-auth-btn .icon {
   font-size: 24px;
 }
-.disqus-auth-btn:hover {
+.appwriteui-react-disqus-auth-btn:hover {
   background: #007add;
 }
-.disqus-auth-btn .icon {
+.appwriteui-react-disqus-auth-btn .icon {
   color: white;
 }
 
-.dropbox-auth-btn {
+.appwriteui-react-dropbox-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -808,23 +777,23 @@ body {
   background: #005FF7;
   color: #fff;
 }
-.dropbox-auth-btn:hover {
+.appwriteui-react-dropbox-auth-btn:hover {
   cursor: pointer;
 }
-.dropbox-auth-btn:focus {
+.appwriteui-react-dropbox-auth-btn:focus {
   outline: none;
 }
-.dropbox-auth-btn .icon {
+.appwriteui-react-dropbox-auth-btn .icon {
   font-size: 24px;
 }
-.dropbox-auth-btn:hover {
+.appwriteui-react-dropbox-auth-btn:hover {
   background: #0042ab;
 }
-.dropbox-auth-btn .icon {
+.appwriteui-react-dropbox-auth-btn .icon {
   color: white;
 }
 
-.etsy-auth-btn {
+.appwriteui-react-etsy-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -840,23 +809,23 @@ body {
   background: #EC6102;
   color: #fff;
 }
-.etsy-auth-btn:hover {
+.appwriteui-react-etsy-auth-btn:hover {
   cursor: pointer;
 }
-.etsy-auth-btn:focus {
+.appwriteui-react-etsy-auth-btn:focus {
   outline: none;
 }
-.etsy-auth-btn .icon {
+.appwriteui-react-etsy-auth-btn .icon {
   font-size: 24px;
 }
-.etsy-auth-btn:hover {
+.appwriteui-react-etsy-auth-btn:hover {
   background: #a04201;
 }
-.etsy-auth-btn .icon {
+.appwriteui-react-etsy-auth-btn .icon {
   color: white;
 }
 
-.gitlab-auth-btn {
+.appwriteui-react-gitlab-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -872,23 +841,23 @@ body {
   background: #DB4128;
   color: #fff;
 }
-.gitlab-auth-btn:hover {
+.appwriteui-react-gitlab-auth-btn:hover {
   cursor: pointer;
 }
-.gitlab-auth-btn:focus {
+.appwriteui-react-gitlab-auth-btn:focus {
   outline: none;
 }
-.gitlab-auth-btn .icon {
+.appwriteui-react-gitlab-auth-btn .icon {
   font-size: 24px;
 }
-.gitlab-auth-btn:hover {
+.appwriteui-react-gitlab-auth-btn:hover {
   background: #9c2c1a;
 }
-.gitlab-auth-btn .icon {
+.appwriteui-react-gitlab-auth-btn .icon {
   color: white;
 }
 
-.linkedin-auth-btn {
+.appwriteui-react-linkedin-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -904,23 +873,23 @@ body {
   background: #0A63BC;
   color: #fff;
 }
-.linkedin-auth-btn:hover {
+.appwriteui-react-linkedin-auth-btn:hover {
   cursor: pointer;
 }
-.linkedin-auth-btn:focus {
+.appwriteui-react-linkedin-auth-btn:focus {
   outline: none;
 }
-.linkedin-auth-btn .icon {
+.appwriteui-react-linkedin-auth-btn .icon {
   font-size: 24px;
 }
-.linkedin-auth-btn:hover {
+.appwriteui-react-linkedin-auth-btn:hover {
   background: #063d73;
 }
-.linkedin-auth-btn .icon {
+.appwriteui-react-linkedin-auth-btn .icon {
   color: white;
 }
 
-.notion-auth-btn {
+.appwriteui-react-notion-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -936,23 +905,23 @@ body {
   background: #0B0B0B;
   color: #fff;
 }
-.notion-auth-btn:hover {
+.appwriteui-react-notion-auth-btn:hover {
   cursor: pointer;
 }
-.notion-auth-btn:focus {
+.appwriteui-react-notion-auth-btn:focus {
   outline: none;
 }
-.notion-auth-btn .icon {
+.appwriteui-react-notion-auth-btn .icon {
   font-size: 24px;
 }
-.notion-auth-btn:hover {
+.appwriteui-react-notion-auth-btn:hover {
   background: black;
 }
-.notion-auth-btn .icon {
+.appwriteui-react-notion-auth-btn .icon {
   color: white;
 }
 
-.okta-auth-btn {
+.appwriteui-react-okta-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -968,23 +937,23 @@ body {
   background: #0079BB;
   color: #fff;
 }
-.okta-auth-btn:hover {
+.appwriteui-react-okta-auth-btn:hover {
   cursor: pointer;
 }
-.okta-auth-btn:focus {
+.appwriteui-react-okta-auth-btn:focus {
   outline: none;
 }
-.okta-auth-btn .icon {
+.appwriteui-react-okta-auth-btn .icon {
   font-size: 24px;
 }
-.okta-auth-btn:hover {
+.appwriteui-react-okta-auth-btn:hover {
   background: #00486f;
 }
-.okta-auth-btn .icon {
+.appwriteui-react-okta-auth-btn .icon {
   color: white;
 }
 
-.paypal-auth-btn {
+.appwriteui-react-paypal-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1000,23 +969,23 @@ body {
   background: #27338e;
   color: #fff;
 }
-.paypal-auth-btn:hover {
+.appwriteui-react-paypal-auth-btn:hover {
   cursor: pointer;
 }
-.paypal-auth-btn:focus {
+.appwriteui-react-paypal-auth-btn:focus {
   outline: none;
 }
-.paypal-auth-btn .icon {
+.appwriteui-react-paypal-auth-btn .icon {
   font-size: 24px;
 }
-.paypal-auth-btn:hover {
+.appwriteui-react-paypal-auth-btn:hover {
   background: #171d52;
 }
-.paypal-auth-btn .icon {
+.appwriteui-react-paypal-auth-btn .icon {
   color: white;
 }
 
-.podio-auth-btn {
+.appwriteui-react-podio-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1032,24 +1001,24 @@ body {
   background: #057186;
   color: #fff;
 }
-.podio-auth-btn:hover {
+.appwriteui-react-podio-auth-btn:hover {
   cursor: pointer;
 }
-.podio-auth-btn:focus {
+.appwriteui-react-podio-auth-btn:focus {
   outline: none;
 }
-.podio-auth-btn .icon {
+.appwriteui-react-podio-auth-btn .icon {
   font-size: 24px;
 }
-.podio-auth-btn:hover {
+.appwriteui-react-podio-auth-btn:hover {
   background: #02333c;
 }
-.podio-auth-btn .icon {
+.appwriteui-react-podio-auth-btn .appwriteui-react-icon {
   height: 30px;
   width: 30px;
 }
 
-.salesforce-auth-btn {
+.appwriteui-react-salesforce-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1065,23 +1034,23 @@ body {
   background: #029cd9;
   color: #fff;
 }
-.salesforce-auth-btn:hover {
+.appwriteui-react-salesforce-auth-btn:hover {
   cursor: pointer;
 }
-.salesforce-auth-btn:focus {
+.appwriteui-react-salesforce-auth-btn:focus {
   outline: none;
 }
-.salesforce-auth-btn .icon {
+.appwriteui-react-salesforce-auth-btn .icon {
   font-size: 24px;
 }
-.salesforce-auth-btn:hover {
+.appwriteui-react-salesforce-auth-btn:hover {
   background: #01668d;
 }
-.salesforce-auth-btn .icon {
+.appwriteui-react-salesforce-auth-btn .icon {
   color: white;
 }
 
-.slack-auth-btn {
+.appwriteui-react-slack-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1097,24 +1066,24 @@ body {
   background: #481449;
   color: #fff;
 }
-.slack-auth-btn:hover {
+.appwriteui-react-slack-auth-btn:hover {
   cursor: pointer;
 }
-.slack-auth-btn:focus {
+.appwriteui-react-slack-auth-btn:focus {
   outline: none;
 }
-.slack-auth-btn .icon {
+.appwriteui-react-slack-auth-btn .icon {
   font-size: 24px;
 }
-.slack-auth-btn:hover {
+.appwriteui-react-slack-auth-btn:hover {
   background: #0d040d;
 }
-.slack-auth-btn .icon {
+.appwriteui-react-slack-auth-btn .icon {
   transform: scale(0.45);
   position: relative;
 }
 
-.stripe-auth-btn {
+.appwriteui-react-stripe-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1130,23 +1099,23 @@ body {
   background: #6057f7;
   color: #fff;
 }
-.stripe-auth-btn:hover {
+.appwriteui-react-stripe-auth-btn:hover {
   cursor: pointer;
 }
-.stripe-auth-btn:focus {
+.appwriteui-react-stripe-auth-btn:focus {
   outline: none;
 }
-.stripe-auth-btn .icon {
+.appwriteui-react-stripe-auth-btn .icon {
   font-size: 24px;
 }
-.stripe-auth-btn:hover {
+.appwriteui-react-stripe-auth-btn:hover {
   background: #776ff8;
 }
-.stripe-auth-btn .icon {
+.appwriteui-react-stripe-auth-btn .icon {
   color: white;
 }
 
-.tradeshift-auth-btn {
+.appwriteui-react-tradeshift-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1162,27 +1131,27 @@ body {
   background: #0833E9;
   color: #fff;
 }
-.tradeshift-auth-btn:hover {
+.appwriteui-react-tradeshift-auth-btn:hover {
   cursor: pointer;
 }
-.tradeshift-auth-btn:focus {
+.appwriteui-react-tradeshift-auth-btn:focus {
   outline: none;
 }
-.tradeshift-auth-btn .icon {
+.appwriteui-react-tradeshift-auth-btn .icon {
   font-size: 24px;
 }
-.tradeshift-auth-btn:hover {
+.appwriteui-react-tradeshift-auth-btn:hover {
   background: #05239f;
 }
-.tradeshift-auth-btn span {
+.appwriteui-react-tradeshift-auth-btn span {
   position: relative;
   right: 13px;
 }
-.tradeshift-auth-btn .icon {
+.appwriteui-react-tradeshift-auth-btn .icon {
   transform: scale(0.4);
 }
 
-.wordpress-auth-btn {
+.appwriteui-react-wordpress-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1198,23 +1167,23 @@ body {
   background: #207196;
   color: #fff;
 }
-.wordpress-auth-btn:hover {
+.appwriteui-react-wordpress-auth-btn:hover {
   cursor: pointer;
 }
-.wordpress-auth-btn:focus {
+.appwriteui-react-wordpress-auth-btn:focus {
   outline: none;
 }
-.wordpress-auth-btn .icon {
+.appwriteui-react-wordpress-auth-btn .icon {
   font-size: 24px;
 }
-.wordpress-auth-btn:hover {
+.appwriteui-react-wordpress-auth-btn:hover {
   background: #134257;
 }
-.wordpress-auth-btn .icon {
+.appwriteui-react-wordpress-auth-btn .icon {
   color: white;
 }
 
-.yahoo-auth-btn {
+.appwriteui-react-yahoo-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1230,23 +1199,23 @@ body {
   background: #5320c4;
   color: #fff;
 }
-.yahoo-auth-btn:hover {
+.appwriteui-react-yahoo-auth-btn:hover {
   cursor: pointer;
 }
-.yahoo-auth-btn:focus {
+.appwriteui-react-yahoo-auth-btn:focus {
   outline: none;
 }
-.yahoo-auth-btn .icon {
+.appwriteui-react-yahoo-auth-btn .icon {
   font-size: 24px;
 }
-.yahoo-auth-btn:hover {
+.appwriteui-react-yahoo-auth-btn:hover {
   background: #371582;
 }
-.yahoo-auth-btn .icon {
+.appwriteui-react-yahoo-auth-btn .icon {
   color: white;
 }
 
-.yammer-auth-btn {
+.appwriteui-react-yammer-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1262,24 +1231,24 @@ body {
   background: #0174CD;
   color: #fff;
 }
-.yammer-auth-btn:hover {
+.appwriteui-react-yammer-auth-btn:hover {
   cursor: pointer;
 }
-.yammer-auth-btn:focus {
+.appwriteui-react-yammer-auth-btn:focus {
   outline: none;
 }
-.yammer-auth-btn .icon {
+.appwriteui-react-yammer-auth-btn .icon {
   font-size: 24px;
 }
-.yammer-auth-btn:hover {
+.appwriteui-react-yammer-auth-btn:hover {
   background: #014981;
 }
-.yammer-auth-btn .icon {
+.appwriteui-react-yammer-auth-btn .icon {
   height: 35px;
   width: 35px;
 }
 
-.yandex-auth-btn {
+.appwriteui-react-yandex-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1295,23 +1264,23 @@ body {
   background: #F71500;
   color: #fff;
 }
-.yandex-auth-btn:hover {
+.appwriteui-react-yandex-auth-btn:hover {
   cursor: pointer;
 }
-.yandex-auth-btn:focus {
+.appwriteui-react-yandex-auth-btn:focus {
   outline: none;
 }
-.yandex-auth-btn .icon {
+.appwriteui-react-yandex-auth-btn .icon {
   font-size: 24px;
 }
-.yandex-auth-btn:hover {
+.appwriteui-react-yandex-auth-btn:hover {
   background: #ab0e00;
 }
-.yandex-auth-btn .icon {
+.appwriteui-react-yandex-auth-btn .icon {
   color: white;
 }
 
-.zoom-auth-btn {
+.appwriteui-react-zoom-auth-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1327,23 +1296,18 @@ body {
   background: #0265F0;
   color: #fff;
 }
-.zoom-auth-btn:hover {
+.appwriteui-react-zoom-auth-btn:hover {
   cursor: pointer;
 }
-.zoom-auth-btn:focus {
+.appwriteui-react-zoom-auth-btn:focus {
   outline: none;
 }
-.zoom-auth-btn .icon {
+.appwriteui-react-zoom-auth-btn .icon {
   font-size: 24px;
 }
-.zoom-auth-btn:hover {
+.appwriteui-react-zoom-auth-btn:hover {
   background: #0145a4;
 }
-.zoom-auth-btn .icon {
+.appwriteui-react-zoom-auth-btn .icon {
   color: white;
-}
-
-.components-showcase {
-  display: flex;
-  flex-direction: row;
 }

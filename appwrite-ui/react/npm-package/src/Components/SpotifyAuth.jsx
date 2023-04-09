@@ -10,7 +10,7 @@ const SpotifyAuth = ({account, successUrl, failureUrl}) => {
     //     }
     // }
     // ><FaSpotify className='icon' /> &nbsp; Sign in with Spotify</button>
-    <AuthButton account={account} btnClassName='spotify-auth-btn' authProvider='spotify' successUrl={successUrl} failureUrl={failureUrl} icon={<FaSpotify className='icon' />} displayText='Sign in with Spotify' />
+    <AuthButton account={account} btnClassName='appwriteui-react-spotify-auth-btn' authProvider='spotify' successUrl={successUrl} failureUrl={failureUrl} icon={<FaSpotify className='icon' />} displayText='Sign in with Spotify' />
     )
 }
 
