@@ -21,7 +21,7 @@ describe('AppwriteAuthComponent', () => {
             failureUrl={failureUrl}
             />
         )
-        const childComponent = container.querySelector(`.${authProvider}-auth-btn`);
+        const childComponent = container.querySelector(`.appwriteui-react-${authProvider}-auth-btn`);
         expect(childComponent).toBeInTheDocument();
     })
 
@@ -34,7 +34,7 @@ describe('AppwriteAuthComponent', () => {
             failureUrl={failureUrl}
             />
         )
-        const childComponent = container.querySelector(`.${authProvider}-auth-btn`);
+        const childComponent = container.querySelector(`.appwriteui-react-${authProvider}-auth-btn`);
         fireEvent.click(childComponent);
         expect(account.createOAuth2Session).toHaveBeenCalledWith(authProvider, successUrl, failureUrl);
     })

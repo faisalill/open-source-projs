@@ -69,7 +69,7 @@ describe('AppwriteAuthComponent', () => {
             failureUrl={failureUrl}
             />
         )
-        const childComponent = container.querySelector(`.${authProvider}-auth-btn`);
+        const childComponent = container.querySelector(`.appwriteui-react-${authProvider}-auth-btn`);
         expect(childComponent).toBeInTheDocument();
     })
 
