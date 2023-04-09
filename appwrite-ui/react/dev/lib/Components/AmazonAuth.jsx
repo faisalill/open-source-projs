@@ -1,10 +1,8 @@
 import React from 'react'
-import { Account } from 'appwrite'
 import {FaAmazon} from 'react-icons/fa'
 import AuthButton from '../Helper/AuthButton.jsx'
 
-const AmazonAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)
+const AmazonAuth = ({account, successUrl, failureUrl}) => {
   return (
     // <button className="amazon-auth-btn"
     // onClick={()=>{
@@ -12,7 +10,7 @@ const AmazonAuth = ({client, successUrl, failureUrl}) => {
     //     }
     // }
     // ><FaAmazon className='icon' /> &nbsp; Sign in with Amazon</button>
-    <AuthButton account={account} btnClassName='amazon-auth-btn' authProvider='amazon' successUrl={successUrl} failureUrl={failureUrl} icon={<FaAmazon className='icon' />} displayText='Sign in with Amazon' />
+    <AuthButton  account={account} btnClassName='amazon-auth-btn' authProvider='amazon' successUrl={successUrl} failureUrl={failureUrl} icon={<FaAmazon className='icon' />} displayText='Sign in with Amazon' />
   )
 }
 

@@ -1,10 +1,8 @@
 import {FcGoogle} from 'react-icons/fc'
-import { Account } from 'appwrite'
 import AuthButton from '../Helper/AuthButton.jsx'
 import React from 'react'
 
-const GoogleAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)    
+const GoogleAuth = ({ successUrl, failureUrl, account }) => {
 return (
     // <button className='google-auth-btn'
     // onClick={()=>{

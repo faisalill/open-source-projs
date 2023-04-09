@@ -1,8 +1,6 @@
 import AuthButton from '../Helper/AuthButton.jsx'
-import { Account } from 'appwrite'
 import React from 'react'
-const YammerAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)
+const YammerAuth = ({account, successUrl, failureUrl}) => {
   return (
     <AuthButton account={account} authProvider='yammer' btnClassName='yammer-auth-btn' displayText='Sign in with Yammer' successUrl={successUrl} failureUrl={failureUrl} icon={<YammerLogo className='icon'/> }   />
   )

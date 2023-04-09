@@ -22,15 +22,19 @@ npm run dev
 ```
 > Note: A next js development environment will start on localhost . 
 7. All the code related to the npm package is in the `lib` directory inside `dev`. The running server uses the exports from the index.js file  and the index.scss for styling the components from the `lib` directory itself. Add the changes u want in the `lib` directory and the changes will be reflected in the development environment. And when you are done with the changes, you can follow the next step.
-8. To build the npm package, change directory to the `npm-package` directory and run the following command.
+8. Write unit tests for the changes you made in the `lib` directory. The unit tests are written in the `tests` directory inside `dev`. The unit tests are written using the [Jest](https://jestjs.io/) framework. You can run the unit tests by running the following command.
+```bash
+npm run test
+```
+9. To build the npm package, change directory to the `npm-package` directory and run the following command.
 ```bash
 npm run build
 ```
-9. The build will be created in the `dist` directory. You can test the npm package but first change the name of the package in `package.json` file  and running the following command.
+10. The build will be created in the `dist` directory. You can test the npm package but first change the name of the package in `package.json` file  and running the following command.
 ```bash
 npm link  
 ``` 
-10. Now you can test the npm package by creating a new react app and running the following command.
+11. Now you can test the npm package by creating a new react app and running the following command.
 ```bash
 npm link [package-name]
 ```

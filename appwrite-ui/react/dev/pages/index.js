@@ -6,7 +6,6 @@ import {
 import useAuthUser from "@/lib/Hooks/useAuthUser";
 // import {AppwriteAuthComponent, useAuthUser} from 'appwriteui-react'
 
-
 const client = new Client()
   .setEndpoint(process.env.NEXT_PUBLIC_URL)
   .setProject(process.env.NEXT_PUBLIC_ID);
@@ -112,68 +111,68 @@ const App = () => {
         <div>
       <AppwriteAuthComponent
         authProvider="google"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="facebook"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="github"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="amazon"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
-      <AppwriteAuthComponent authProvider='auth0' client={client} successUrl={successUrl} failureUrl={failureUrl} />
+      <AppwriteAuthComponent authProvider='auth0' account={account} successUrl={successUrl} failureUrl={failureUrl} />
       <AppwriteAuthComponent
         authProvider="discord"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="spotify"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='twitch'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="email"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="phone"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="autodesk"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='bitbucket'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
@@ -181,73 +180,73 @@ const App = () => {
       <div>
       <AppwriteAuthComponent
         authProvider="bitly"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="dailymotion"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='disqus'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="dropbox"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='gitlab'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider="notion"
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='podio'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='slack'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='wordpress'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='yandex'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='zoom'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='yammer'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
@@ -255,73 +254,73 @@ const App = () => {
       <div>
       <AppwriteAuthComponent
         authProvider='yahoo'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='microsoft'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='apple'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='authentik'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='box'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='etsy'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='linkedin'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='okta'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='paypal'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='salesforce'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='stripe'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
       <AppwriteAuthComponent
         authProvider='tradeshift'
-        client={client}
+        account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}
       />

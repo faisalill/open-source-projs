@@ -33,20 +33,21 @@ npm install appwriteui-react;
 ### Usage <a name="usage"></a>
 Import the Appwrite Auth Component in your React project along with the css file and pass it props to configure it for different authentication providers. For example, to add a google login button, you can use the following code:
 ```js
-import {Client} from 'appwrite';
+import {Client, Account} from 'appwrite';
 import {AppwriteAuthComponent} from 'appwriteui-react';
 import 'appwriteui-react/index.css'
 
 const client = new Client()
 .setEndpoint(...)// Your Appwrite Endpoint
 .setProject(...);// Your project ID
+const account = new Account(client);
 
 const successUrl = 'redirect url when the authenticaion is successfull';
 const failureUrl = 'redirect url when the authenticaion is unsuccessfull';
 
 <AppwriteAuthComponent
         authProvider="google"
-        client={client} // Appwrite client
+        account={account} // Appwrite account
         successUrl={successUrl}
         failureUrl={failureUrl}
 />
@@ -64,7 +65,7 @@ You can pass the following props to configure the Appwrite Auth Component:
 ```jsx
 <AppwriteAuthComponent
         authProvider="..."//see the list of auth providers below
-        client={client} // Appwrite client
+        account={account} // Appwrite client
         successUrl="..."
         failureUrl="..."
 />
@@ -72,7 +73,7 @@ You can pass the following props to configure the Appwrite Auth Component:
 | Name |  Required | Description |
 | :--- | :--: | ---: |
 | `authProvider` |  yes | The auth provider that you want to use for authentication. Check [here](#auth-providers) for all the options u can enter for `authProvider`|
-| `client` | yes | It is the `Client` from the Appwrite Sdk which is setup using the appwrite deployment url and project id as shown [above](#usage).    |
+| `account` | yes | It is the `account` from the Appwrite Sdk as shown [above](#usage).    |
 | `sucessUrl` | yes | Url to redirect the user when authentication is successful.|
 | `failureUrl` | yes | Url to redirect the user when authentication is unsuccessful.|
 

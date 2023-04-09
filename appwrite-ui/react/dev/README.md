@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
+## Getting started: 
+1. Fork the repository
+2. Clone the repository to your local machine
+3. Open the repository in the code editor of your choice
+4. Change directory to the `react` folder
+```bash
+cd react
+```
+5. There are directories called `dev` and `npm-package` in the `react` folder. The `dev` directory contains the source code for the development environment and the `npm-package` directory contains the source code for the npm package. Change directory to the `dev` directory and install the required packages to start working on the project.
+```bash
+cd dev
+npm install
+```
+6. Run the development environment
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+> Note: A next js development environment will start on localhost . 
+7. All the code related to the npm package is in the `lib` directory inside `dev`. The running server uses the exports from the index.js file  and the index.scss for styling the components from the `lib` directory itself. Add the changes u want in the `lib` directory and the changes will be reflected in the development environment. And when you are done with the changes, you can follow the next step.
+8. Write unit tests for the changes you made in the `lib` directory. The unit tests are written in the `tests` directory inside `dev`. The unit tests are written using the [Jest](https://jestjs.io/) framework. You can run the unit tests by running the following command.
+```bash
+npm run test
+```
+9. To build the npm package, change directory to the `npm-package` directory and run the following command.
+```bash
+npm run build
+```
+10. The build will be created in the `dist` directory. You can test the npm package but first change the name of the package in `package.json` file  and running the following command.
+```bash
+npm link  
+``` 
+11. Now you can test the npm package by creating a new react app and running the following command.
+```bash
+npm link [package-name]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

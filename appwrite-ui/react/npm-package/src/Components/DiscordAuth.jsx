@@ -1,10 +1,8 @@
 import React from 'react'
 import {FaDiscord} from 'react-icons/fa'
-import { Account } from 'appwrite'
 import AuthButton from '../Helper/AuthButton.jsx'
 
-const DiscordAuth = ({client , successUrl, failureUrl}) => {
-    const account = new Account(client)
+const DiscordAuth = ({account , successUrl, failureUrl}) => {
     return (
     // <button className="discord-auth-btn"
     // onClick={()=>{

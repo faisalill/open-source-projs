@@ -1,10 +1,8 @@
 import React from 'react'
 import {SiAuth0} from 'react-icons/si'
-import { Account } from 'appwrite'
 import AuthButton from '../Helper/AuthButton.jsx'
 
-const AuthO = ({client , successUrl, failureUrl}) => {
-    const account = new Account(client)
+const Auth0 = ({account, successUrl, failureUrl}) => {
   return (
     // <button className="auth0-auth-btn"
     // onClick={()=>{
@@ -16,4 +14,4 @@ const AuthO = ({client , successUrl, failureUrl}) => {
     )
 }
 
-export default AuthO
+export default Auth0

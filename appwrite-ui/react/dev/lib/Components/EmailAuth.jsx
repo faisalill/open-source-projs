@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import {MdEmail} from 'react-icons/md'
 import {AiFillEye,AiFillEyeInvisible} from 'react-icons/ai'
-import { Account } from 'appwrite'
 import { v4 as uuidv4 } from 'uuid'
 import React from 'react'
-const EmailAuth = ({client, successUrl, failureUrl}) => {
+const EmailAuth = ({account, successUrl, failureUrl}) => {
   const [showPopup, setshowPopup] = useState(false)
-  const account = new Account(client) 
   return (
     <>
     <button className="email-auth-btn"
@@ -47,7 +45,7 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
       > 
         
         <label className='label'>Email</label>
-        <input className='email' type="email" placeholder="Email" 
+        <input title='email-input' className='email' type="email" placeholder="Email" 
         value={email}
         onChange={(e)=>{
           setEmail(e.target.value)
@@ -56,7 +54,7 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
         />
         <label className='label'>Password</label>
         <div className='password-input-wrapper'>
-        <input className='password' type={showPassword ? "text" : "password"} placeholder="Password" 
+        <input title='password-input' className='password' type={showPassword ? "text" : "password"} placeholder="Password" 
         value={password}
         onChange={(e)=>{
           setPassword(e.target.value)
@@ -64,18 +62,18 @@ const EmailPromptPopup = ({showPopup, setshowPopup, account, successUrl, failure
         }
         />
         {showPassword ? 
-        <AiFillEyeInvisible className='show-password'
+        <AiFillEyeInvisible title='show-hide-password-button' className='show-password'
         onClick={()=>{
          setshowPassword(!showPassword)
         }}
        />
-        : <AiFillEye className='show-password'
+        : <AiFillEye title='show-hide-password-button' className='show-password'
          onClick={()=>{
           setshowPassword(!showPassword)
          }}
         />}
         </div>
-        <button className='submit' type="submit"
+        <button title='pre-verification-submit-button' className='submit' type="submit"
         onClick={async (e)=>{
           e.preventDefault()
           setshowPopup(false)
@@ -117,14 +115,14 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
       }}
       >
         <label className='label'>Verification Link (check your spam inbox too)</label>
-        <input className='phoneNumber'  placeholder="Paste Verification Link " 
+        <input title='verification-link-input' className='phoneNumber'  placeholder="Paste Verification Link " 
         value={verificationCode}
         onChange={(e)=>{
           setverificationCode(e.target.value)
         }
         }
         />
-        <button className='submit' type="submit"
+        <button title='verification-link-submit-button' className='submit' type="submit"
         onClick={(e)=>{
           e.preventDefault()
           setshowVerificationPopup(false)

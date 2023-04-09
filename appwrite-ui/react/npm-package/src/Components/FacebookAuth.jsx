@@ -1,9 +1,7 @@
 import {AiFillFacebook} from 'react-icons/ai'
-import { Account } from 'appwrite'
 import AuthButton from '../Helper/AuthButton.jsx'
 import React from 'react'
-const FacebookAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)
+const FacebookAuth = ({account, successUrl, failureUrl}) => {
     return(
     // <button className='facebook-auth-btn'
     // onClick={()=>{

@@ -1,10 +1,8 @@
 import React from 'react'
 import {FaTwitch} from 'react-icons/fa'
-import { Account } from 'appwrite'
 import AuthButton from '../Helper/AuthButton.jsx'
 
-const TwitchAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)
+const TwitchAuth = ({account, successUrl, failureUrl}) => {
   return (
     // <button className="twitch-auth-btn"
     // onClick={()=>{

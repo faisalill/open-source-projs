@@ -1,8 +1,6 @@
-import { Account } from 'appwrite'
 import AuthButton from '../Helper/AuthButton.jsx'
 import React from 'react'
-const MicrosoftAuth = ({client, successUrl, failureUrl}) => {
-  const account = new Account(client)
+const MicrosoftAuth = ({account, successUrl, failureUrl}) => {
   return (
     // <button className="microsoft-auth-btn"
     // onClick={ ()=>{

@@ -1,8 +1,6 @@
 import AuthButton from '../Helper/AuthButton.jsx'
-import { Account } from 'appwrite'
 import React from 'react'
-const AuthentikAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)
+const AuthentikAuth = ({account, successUrl, failureUrl}) => {
   return (
     <AuthButton account={account} authProvider='authentik' btnClassName='authentik-auth-btn' displayText='Sign in with Authentik' successUrl={successUrl} failureUrl={failureUrl} icon={<AuthenticSvg /> }   />
   )

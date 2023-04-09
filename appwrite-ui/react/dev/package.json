@@ -7,14 +7,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sass-compile": "sass --no-source-map ./styles/globals.scss ./lib/index.css"
+    "sass-compile": "sass --no-source-map ./styles/globals.scss ./lib/index.css",
+    "test": "jest  --testEnvironment jsdom --watch"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "dependencies": {
     "@next/font": "13.2.4",
+    "@testing-library/react": "^14.0.0",
     "appwrite": "^10.2.0",
-    "appwriteui-react": "^1.1.0",
+    "appwriteui-react": "^1.1.4",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "jest": "^29.5.0",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -22,5 +28,9 @@
     "sass": "^1.60.0",
     "third-try": "^2.0.0",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "jest-environment-jsdom": "^29.5.0"
   }
 }

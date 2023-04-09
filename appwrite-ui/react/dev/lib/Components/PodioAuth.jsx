@@ -1,8 +1,6 @@
 import AuthButton from '../Helper/AuthButton.jsx'
-import { Account } from 'appwrite'
 import React from 'react'
-const PodioAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)
+const PodioAuth = ({account, successUrl, failureUrl}) => {
   return (
     <AuthButton account={account} authProvider='podio' btnClassName='podio-auth-btn' displayText='Sign in with Podio' successUrl={successUrl} failureUrl={failureUrl} icon={<PodioSvg className='icon'/> }   />
   )

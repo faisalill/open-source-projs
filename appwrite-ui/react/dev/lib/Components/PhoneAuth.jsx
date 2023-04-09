@@ -1,14 +1,12 @@
 import {useState, useEffect} from 'react'
 import {FaPhoneAlt} from 'react-icons/fa'
-import { Account } from 'appwrite'
 import {v4 as uuidv4} from 'uuid'
 import React from 'react'
-const PhoneAuth = ({client,  successUrl, failureUrl}) => {
+const PhoneAuth = ({account,  successUrl, failureUrl}) => {
   const [showPopup, setshowPopup] = useState(false)
-  const account = new Account(client)
   return (
     <>
-    <button className="phone-auth-btn"
+    <button title='phone-auth-button' className="phone-auth-btn"
     onClick={()=>{
       setshowPopup(!showPopup)
     }}
@@ -42,14 +40,14 @@ const PhonePromptPopup = ({showPopup, setshowPopup, account,successUrl, failureU
       }}
       >
         <label className='label'>Phone Number</label>
-        <input className='phoneNumber'  placeholder="Country Code + Phone Number" 
+        <input title='phone-number-input' className='phoneNumber'  placeholder="Country Code + Phone Number" 
         value={phone}
         onChange={(e)=>{
           setPhone(e.target.value)
         }
         }
         />
-        <button className='submit' type="submit"
+        <button title='phone-number-submit-button' className='submit' type="submit"
         onClick={(e)=>{
           e.preventDefault()
           setPhone('')
@@ -83,14 +81,14 @@ const VerificationPopup = ({changeId, setchangeId, id, showVerificationPopup, se
       }}
       >
         <label className='label'>Verification Code</label>
-        <input className='phoneNumber'  placeholder="Enter Verification Code" 
+        <input title='verification-input' className='phoneNumber'  placeholder="Enter Verification Code" 
         value={verificationCode}
         onChange={(e)=>{
           setverificationCode(e.target.value)
         }
         }
         />
-        <button className='submit' type="submit"
+        <button title='verification-submit-button' className='submit' type="submit"
         onClick={(e)=>{
           e.preventDefault()
           setverificationCode('')

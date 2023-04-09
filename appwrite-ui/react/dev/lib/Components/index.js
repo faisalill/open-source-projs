@@ -7,17 +7,17 @@ import MicrosoftAuth from "./MicrosoftAuth.jsx";
 import AppleAuth from "./AppleAuth.jsx";
 import PhoneAuth from "./PhoneAuth.jsx";
 import AmazonAuth from "./AmazonAuth.jsx";
-import AuthO from "./AuthO.jsx";
+import AuthO from "./Auth0.jsx";
 import DiscordAuth from "./DiscordAuth.jsx";
 import SpotifyAuth from "./SpotifyAuth.jsx";
 import TwitchAuth from "./TwitchAuth.jsx";
 import AutodeskAuth from "./AutodeskAuth.jsx";
 import AuthentikAuth from "./AuthentikAuth.jsx";
-import BitBucketAuth from "./BitBucketAuth.jsx";
+import BitbucketAuth from "./BitbucketAuth.jsx";
 import BoxAuth from "./BoxAuth.jsx";
-import DailyMotionAuth from "./DailyMotionAuth.jsx";
+import DailymotionAuth from "./DailymotionAuth.jsx";
 import DisqusAuth from "./DisqusAuth.jsx";
-import DropBoxAuth from "./DropBoxAuth.jsx";
+import DropboxAuth from "./DropboxAuth.jsx";
 import EtsyAuth from "./EtsyAuth.jsx";
 import GitlabAuth from "./GitlabAuth.jsx";
 import LinkedinAuth from "./LinkedinAuth.jsx";
@@ -37,117 +37,117 @@ import StripeAuth from "./StripeAuth.jsx";
 import YammerAuth from "./YammerAuth.jsx";
 import React from 'react'
 
-const AppwriteAuthComponent = ({authProvider, client, successUrl, failureUrl, Refresh, setRefresh, setLoading}) =>{
+const AppwriteAuthComponent = ({authProvider,  successUrl, failureUrl, account}) =>{
   if(authProvider === 'google'){
-    return (<GoogleAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<GoogleAuth  account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'facebook'){
-    return (<FacebookAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<FacebookAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   // if(authProvider === 'twitter'){
   //   return (<TwitterAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
   // }
   if(authProvider === 'github'){
-    return (<GithubAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<GithubAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'email'){
-    return (<EmailAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>)
+    return (<EmailAuth account={account} successUrl={successUrl} failureUrl={failureUrl} />)
   }
   if(authProvider === 'microsoft'){
-    return (<MicrosoftAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<MicrosoftAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'apple'){
-    return (<AppleAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<AppleAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'phone'){
-    return (<PhoneAuth client={client} successUrl={successUrl} failureUrl={failureUrl} Refresh={Refresh} setRefresh={setRefresh} setLoading={setLoading}/>)
+    return (<PhoneAuth account={account} successUrl={successUrl} failureUrl={failureUrl} />)
   }
   if(authProvider === 'amazon'){
-    return (<AmazonAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<AmazonAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'auth0'){
-    return (<AuthO client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<AuthO account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'discord'){
-    return (<DiscordAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<DiscordAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'spotify'){
-    return (<SpotifyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<SpotifyAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'twitch'){
-    return (<TwitchAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<TwitchAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'autodesk'){
-    return (<AutodeskAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<AutodeskAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'authentik'){
-    return (<AuthentikAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<AuthentikAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'bitbucket'){
-    return (<BitBucketAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<BitbucketAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'box'){
-    return (<BoxAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<BoxAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'dailymotion'){
-    return (<DailyMotionAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<DailymotionAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'disqus'){
-    return (<DisqusAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<DisqusAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'dropbox'){
-    return (<DropBoxAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<DropboxAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'etsy'){
-    return (<EtsyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<EtsyAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'gitlab'){
-    return (<GitlabAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<GitlabAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'linkedin'){
-    return (<LinkedinAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<LinkedinAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'notion'){
-    return (<NotionAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<NotionAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'okta'){
-    return (<OktaAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<OktaAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'paypal'){
-    return (<PaypalAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<PaypalAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'podio'){
-    return (<PodioAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<PodioAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'salesforce'){
-    return (<SalesforceAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<SalesforceAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'slack'){
-    return (<SlackAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<SlackAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'tradeshift'){
-    return (<TradeshiftAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<TradeshiftAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'wordpress'){
-    return (<WordpressAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<WordpressAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'yahoo'){
-    return (<YahooAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<YahooAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'yandex'){
-    return (<YandexAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<YandexAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'zoom'){
-    return (<ZoomAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<ZoomAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'bitly'){
-    return (<BitlyAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<BitlyAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'stripe'){
-    return (<StripeAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<StripeAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
   if(authProvider === 'yammer'){
-    return (<YammerAuth client={client} successUrl={successUrl} failureUrl={failureUrl}/>)
+    return (<YammerAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
 
 }
@@ -157,7 +157,6 @@ export {
   AppwriteAuthComponent,
   GoogleAuth,
   FacebookAuth,
-  // TwitterAuth,
   GithubAuth,
   EmailAuth,
   MicrosoftAuth,
@@ -170,11 +169,11 @@ export {
   TwitchAuth,
   AutodeskAuth,
   AuthentikAuth,
-  BitBucketAuth,
+  BitbucketAuth,
   BoxAuth,
-  DailyMotionAuth,
+  DailymotionAuth,
   DisqusAuth,
-  DropBoxAuth,
+  DropboxAuth,
   EtsyAuth,
   GitlabAuth,
   LinkedinAuth,

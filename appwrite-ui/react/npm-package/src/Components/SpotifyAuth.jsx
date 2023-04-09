@@ -1,10 +1,8 @@
 import React from 'react'
 import {FaSpotify} from 'react-icons/fa'
-import { Account } from 'appwrite'
 import AuthButton from '../Helper/AuthButton.jsx'
 
-const SpotifyAuth = ({client, successUrl, failureUrl}) => {
-    const account = new Account(client)
+const SpotifyAuth = ({account, successUrl, failureUrl}) => {
   return (
     // <button className="spotify-auth-btn"
     // onClick={()=>{
