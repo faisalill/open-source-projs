@@ -13,7 +13,7 @@ const account = new Account(client);
 
 const App = () => {
   const { user, setUser, loading, Refresh, setRefresh, setLoading } = useAuthUser(account);
-  let deploymentUrl = "https://appwrite-ui-helper.vercel.app/";
+  let deploymentUrl = "https://appwriteui-react.vercel.app/";
   let successUrl =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
