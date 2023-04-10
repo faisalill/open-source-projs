@@ -1311,3 +1311,67 @@
 .appwriteui-react-zoom-auth-btn .icon {
   color: white;
 }
+
+.appwriteui-react-anonymous-auth-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 250px;
+  height: 45px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease, border-color 0.3s ease;
+  border-radius: 4px;
+  border: none;
+  background: #F02E65;
+  color: #fff;
+}
+.appwriteui-react-anonymous-auth-btn:hover {
+  cursor: pointer;
+}
+.appwriteui-react-anonymous-auth-btn:focus {
+  outline: none;
+}
+.appwriteui-react-anonymous-auth-btn .icon {
+  font-size: 24px;
+}
+.appwriteui-react-anonymous-auth-btn:hover {
+  background: #c30e41;
+}
+.appwriteui-react-anonymous-auth-btn .icon {
+  color: white;
+}
+
+.appwriteui-react-magicurl-auth-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 250px;
+  height: 45px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease, border-color 0.3s ease;
+  border-radius: 4px;
+  border: none;
+  background: #4F4CE8;
+  color: #fff;
+}
+.appwriteui-react-magicurl-auth-btn:hover {
+  cursor: pointer;
+}
+.appwriteui-react-magicurl-auth-btn:focus {
+  outline: none;
+}
+.appwriteui-react-magicurl-auth-btn .icon {
+  font-size: 24px;
+}
+.appwriteui-react-magicurl-auth-btn:hover {
+  background: #6563eb;
+}
+.appwriteui-react-magicurl-auth-btn .icon {
+  color: white;
+}

@@ -74,8 +74,10 @@ $zoom-auth-btn-bg: #0265F0;
 $zoom-auth-btn-text-color: #fff;
 $bitly-auth-btn-bg: #E74C1C;
 $bitly-auth-btn-text-color: #fff;
-
-
+$anonymous-auth-btn-bg: #F02E65;
+$anonymous-auth-btn-text-color: #fff;
+$magicurl-auth-btn-bg: #4F4CE8;
+$magicurl-auth-btn-text-color: #fff;
 
 
 
@@ -730,6 +732,32 @@ $bitly-auth-btn-text-color: #fff;
     color: $zoom-auth-btn-text-color;
     &:hover {
       background: darken($zoom-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .appwriteui-react-anonymous-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $anonymous-auth-btn-bg;
+    color: $anonymous-auth-btn-text-color;
+    &:hover {
+      background: darken($anonymous-auth-btn-bg, 15%);
+    }
+    .icon{
+      color: white;
+    }
+  }
+
+  .appwriteui-react-magicurl-auth-btn{
+    @include flex-center;
+    @include auth-btn;
+    background: $magicurl-auth-btn-bg;
+    color: $magicurl-auth-btn-text-color;
+    &:hover {
+      background: lighten($magicurl-auth-btn-bg, 5%);
     }
     .icon{
       color: white;

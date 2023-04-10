@@ -1,10 +1,10 @@
 import React from "react";
 import { Client, Account } from "appwrite";
-import {
-  AppwriteAuthComponent,
-} from "../lib/Components";
-import useAuthUser from "@/lib/Hooks/useAuthUser";
-// import {AppwriteAuthComponent, useAuthUser} from 'appwriteui-react'
+// import {
+  // AppwriteAuthComponent,
+// } from "../lib/Components";
+// import useAuthUser from "@/lib/Hooks/useAuthUser";
+import {AppwriteAuthComponent, useAuthUser} from 'appwriteui-react'
 
 const client = new Client()
   .setEndpoint(process.env.NEXT_PUBLIC_URL)
@@ -176,6 +176,12 @@ const App = () => {
         successUrl={successUrl}
         failureUrl={failureUrl}
       />
+      <AppwriteAuthComponent
+        authProvider='magicurl'
+        account={account}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
       </div>
       <div>
       <AppwriteAuthComponent
@@ -246,6 +252,12 @@ const App = () => {
       />
       <AppwriteAuthComponent
         authProvider='yammer'
+        account={account}
+        successUrl={successUrl}
+        failureUrl={failureUrl}
+      />
+      <AppwriteAuthComponent
+        authProvider="anonymous"
         account={account}
         successUrl={successUrl}
         failureUrl={failureUrl}

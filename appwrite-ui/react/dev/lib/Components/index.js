@@ -35,6 +35,8 @@ import ZoomAuth from "./ZoomAuth.jsx";
 import BitlyAuth from "./BitlyAuth.jsx";  
 import StripeAuth from "./StripeAuth.jsx";
 import YammerAuth from "./YammerAuth.jsx";
+import AnonymousAuth from "./AnonymousAuth.jsx";
+import MagicurlAuth from "./MagicurlAuth.jsx";
 import React from 'react'
 
 const AppwriteAuthComponent = ({authProvider,  successUrl, failureUrl, account}) =>{
@@ -149,12 +151,19 @@ const AppwriteAuthComponent = ({authProvider,  successUrl, failureUrl, account})
   if(authProvider === 'yammer'){
     return (<YammerAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
   }
-
+  if(authProvider === 'anonymous'){
+    return (<AnonymousAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>)
+  }
+if(authProvider === 'magicurl'){
+    return <MagicurlAuth account={account} successUrl={successUrl} failureUrl={failureUrl}/>
+}
 }
 
 
 export {
   AppwriteAuthComponent,
+  AnonymousAuth,
+  MagicurlAuth,
   GoogleAuth,
   FacebookAuth,
   GithubAuth,

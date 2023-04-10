@@ -80,6 +80,10 @@ You can pass the following props to configure the Appwrite Auth Component:
 
 | Auth Provider | Code | 
 | :--- |  ---: |
+| `Email` |   ```authProvider='email'```|
+| `Phone` |   ```authProvider='phone'```|
+| `Anonymous Session` |   ```authProvider='anonymous'```|
+| `Magic Url` |   ```authProvider='magicurl'```|
 | `Google` |   ```authProvider='google'```|
 | `Facebook` |   ```authProvider='facebook'```|
 | `Github` |   ```authProvider='github'```|
@@ -88,8 +92,6 @@ You can pass the following props to configure the Appwrite Auth Component:
 | `Discord` |   ```authProvider='discord'```|
 | `Spotify` |   ```authProvider='spotify'```|
 | `twitch` |   ```authProvider='twitch'```|
-| `Email` |   ```authProvider='email'```|
-| `Phone` |   ```authProvider='phone'```|
 | `Autodesk` |   ```authProvider='autodesk'```|
 | `Bitbucket` |   ```authProvider='bitbucket'```|
 | `Bitly` |   ```authProvider='bitly'```|

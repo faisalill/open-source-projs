@@ -1,12 +1,10 @@
 // import React from 'react'
 // import AuthButton from '../Helper/AuthButton'
-// import { Account } from 'appwrite'
 // import {} from ''
 
-// const  = ({client, successUrl, failureUrl}) => {
-//     const account = new Account(client)
+// const  = ({account, successUrl, failureUrl}) => {
 //   return (
-//     <AuthButton account={account} authProvider='' btnClassName='-auth-btn' displayText='Sign in with ' successUrl={successUrl} failureUrl={failureUrl} icon={< className='icon'/> }   />
+//     <AuthButton account={account} authProvider='' btnClassName='appwriteui-react--auth-btn' displayText='Sign in with ' successUrl={successUrl} failureUrl={failureUrl} icon={< className='icon'/> }   />
 //   )
 // }
 
