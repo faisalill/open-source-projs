@@ -1,7 +1,7 @@
 import React from 'react'
 const AuthButton = ({account, btnClassName,authProvider,successUrl, failureUrl, icon, displayText }) => {
   return (
-    <button className={btnClassName}
+    <button  className={btnClassName}
     onClick={()=>{
         account.createOAuth2Session(authProvider, successUrl, failureUrl)
     }}

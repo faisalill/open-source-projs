@@ -1,17 +1,52 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Client, Account } from "appwrite";
-// import {
-  // AppwriteAuthComponent,
-// } from "../lib/Components";
-// import useAuthUser from "@/lib/Hooks/useAuthUser";
-import {AppwriteAuthComponent, useAuthUser} from 'appwriteui-react'
+import {
+  AppwriteAuthComponent,
+} from "../lib/Components";
+import useAuthUser from "@/lib/Hooks/useAuthUser";
+// import {AppwriteAuthComponent, useAuthUser} from 'appwriteui-react'
 
-const client = new Client()
-  .setEndpoint(process.env.NEXT_PUBLIC_URL)
-  .setProject(process.env.NEXT_PUBLIC_ID);
-const account = new Account(client);
 
-const App = () => {
+export async function getServerSideProps() {
+  if (process.env.NODE_ENV === "development") {
+  const res = await fetch(process.env.DEV_KEY_URL)
+  const newData = await res.json()
+const data = {
+  url: newData.url,
+  id: newData.id,
+}
+  return {
+    props: {
+      data
+    },
+  };
+}
+else {
+  const res = await fetch(process.env.PRODUCTION_KEY_URL)
+  const newData = await res.json()
+  const data = {
+    url: newData.url,
+    id: newData.id,
+  }
+  return {
+    props: {
+      data
+    },
+  };
+}
+}
+
+
+
+const App = ({data}) => {
+  const [loadingData, setloadingData] = useState(true)
+  const client = new Client()
+  .setEndpoint(data.url)
+  .setProject(data.id)
+  // .setEndpoint(data.url) // Your API Endpoint
+  // .setProject(data.id) // Your project ID
+  const account = new Account(client);
+
   const { user, setUser, loading, Refresh, setRefresh, setLoading } = useAuthUser(account);
   let deploymentUrl = "https://appwriteui-react.vercel.app/";
   let successUrl =
@@ -102,12 +137,14 @@ const App = () => {
           </div>
         </div>
       )}
-      <div className="component-showcase"
-      style={{
-        display: "flex",
-        flexDirection: "row",
-      }}
-      >
+      
+        {loadingData ? 
+        <div className="component-showcase"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+        }}
+        >
         <div>
       <AppwriteAuthComponent
         authProvider="google"
@@ -337,7 +374,7 @@ const App = () => {
         failureUrl={failureUrl}
       />
       </div>
-      </div>
+      </div> : <div>Loading...</div>}
 
       {/* <button
     onClick={()=>{
@@ -355,3 +392,5 @@ const App = () => {
 };
 
 export default App;
+
+
