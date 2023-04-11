@@ -10,15 +10,15 @@
 1. [Contributing](#contributing)
 
 ## Demo <a name="demo"></a>
-You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwriteui-react.vercel.app/).
-![](https://appwrite-ui-helper.faisalill.tech/v1/storage/buckets/64317c638e38e15eb728/files/64317cad002428318cdc/view?project=642bd7ca87828dbe6b8b&mode=admin)
+You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwriteui-react-demo.vercel.app/).
+
+![](https://i.ibb.co/pP661Xm/auth-components.png)
 
 ## About <a name="about"></a>
-Appwrite UI is an open source React library that provides a set of reusable components for building your own UI for Appwrite. It is built on top of React and [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web).
+[AppwriteUI](https://www.npmjs.com/package/appwriteui-react) is an open source React library that provides a set of reusable components for building your own UI for Appwrite. It is built on top of React and [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web).
 
 ### Features <a name="features"></a>
 Appwrite UI Auth Components for Web includes a range of features to simplify the process of implementing authentication and user management in your React projects. Some of the key features include:
-
 - A collection of pre-built, fully styled authentication components, including email and phone number login.
 - Support for popular authentication providers, including email , phone number, Google, Facebook, Github, Amazon, Auth0, Discord, Spotify, Twitch, Autodesk, Bitbucket, Bitly, Dailymotion, Disqus, Dropbox, Gitlab, Notion, Podio, Slack, Wordpress, Yandex, Zoom, Yammer, Yahoo, Microsoft, Apple, Authentik, Box, Etsy, LinkedIn, Okta, Paypal, Salesforce, Stripe and Tradeshift.
 - Components match the look and feel of the Brand styling.
@@ -55,7 +55,7 @@ const failureUrl = 'redirect url when the authenticaion is unsuccessfull';
 ```
 The output will be a component as shown below, clicking on it will redirect the user to the google login page and then redirect the user to the successUrl or failureUrl based on the authentication result (make sure to have google login enabled in your appwrite project with the correct credentials):
 
-![](https://appwrite-ui-helper.faisalill.tech/v1/storage/buckets/64317c638e38e15eb728/files/64317cb95835e0f64e36/view?project=642bd7ca87828dbe6b8b&mode=admin)
+![](https://i.ibb.co/yNpjWDw/google-auth-btn.png)
 
 
 ### Configuration <a name="configuration"></a>

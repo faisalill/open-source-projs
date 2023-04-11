@@ -2,14 +2,27 @@
 1. Fork the repository
 2. Clone the repository to your local machine
 3. Open the repository in the code editor of your choice
-4. Change directory to the `react` folder
+4. Change directory to the `dev` folder
 ```bash
-cd react
+cd dev
 ```
-5. There are directories called `dev` and `npm-package` in the `react` folder. The `dev` directory contains the source code for the development environment and the `npm-package` directory contains the source code for the npm package. Change directory to the `dev` directory and install the required packages to start working on the project.
+5. There are directories called `dev` and `npm-package` in the  folder. The `dev` directory contains the source code for the development environment and the `npm-package` directory contains the source code for the npm package. Change directory to the `dev` directory and install the required packages to start working on the 
+project. 
 ```bash
 cd dev
 npm install
+```
+> Make sure to create a .env.local file in the `dev` directory and add the following environment variables. Doing this won't expose your appwrite project id and host url to the browser (Checked it in source dev tools tab). 
+```bash
+DEV_KEY_URL=link which when called with the get method returns the appwrite projectId and host URl
+PRODUCTION_KEY_URL=link which when called with the get method returns the appwrite projectId and host URL but for production
+```
+>THe json must be as following
+```json
+{
+    url : "your project id",
+    id : "your host url"
+}
 ```
 6. Run the development environment
 ```bash
