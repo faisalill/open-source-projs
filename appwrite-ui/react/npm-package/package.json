@@ -1,6 +1,6 @@
 {
   "name": "appwriteui-react",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Pre styled Auth Components to use in a react project with appwrite.",
   "main": "index.js",
   "type": "module",

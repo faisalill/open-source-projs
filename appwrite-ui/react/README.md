@@ -12,7 +12,7 @@
 ## Demo <a name="demo"></a>
 You can see the demo of the Appwrite UI Auth Components for Web [here](https://appwriteui-react-demo.vercel.app/).
 
-![](https://i.ibb.co/pP661Xm/auth-components.png)
+![](https://i.ibb.co/c1tkZGK/auth-components-better.png)
 
 ## About <a name="about"></a>
 [AppwriteUI](https://www.npmjs.com/package/appwriteui-react) is an open source React library that provides a set of reusable components for building your own UI for Appwrite. It is built on top of React and [Appwrite Javascript SDK](https://github.com/appwrite/sdk-for-web).
@@ -121,4 +121,4 @@ You can pass the following props to configure the Appwrite Auth Component:
 
 
 ## Contributing <a name="contributing"></a>
-We would love to see your contributions, whether it's a new feature, bug fix, or just improvement to the documentation. If you are interested in contributing to Appwrite UI, please read our [Contributing Guide](./CONTRIBUTING.md).
+We would love to see your contributions, whether it's a new feature, bug fix, or just improvement to the documentation. If you are interested in contributing to Appwrite UI, please read our [Contributing Guide](https://github.com/faisalill/open-source-projs/blob/main/appwrite-ui/react/CONTRIBUTING.md).
